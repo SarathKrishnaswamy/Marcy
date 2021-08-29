@@ -21,6 +21,10 @@ class MainViewController: UIViewController {
     @IBOutlet weak var ContainerView_2: UIView!
     @IBOutlet weak var SearchContainerView: UIView!
     @IBOutlet weak var SettingsContainerView: UIView!
+    @IBOutlet weak var NotificationContainerView: UIView!
+    @IBOutlet weak var AllgroupsContainerView: UIView!
+    @IBOutlet weak var AllCommunitiesContainerView: UIView!
+    @IBOutlet weak var MultipleImageContainerView: UIView!
     
     
     override func viewDidLoad() {
@@ -58,6 +62,10 @@ class MainViewController: UIViewController {
         self.ContainerView_2.isHidden = true
         self.SearchContainerView.isHidden = true
         self.SettingsContainerView.isHidden = true
+        self.NotificationContainerView.isHidden = true
+        self.AllgroupsContainerView.isHidden = true
+        self.AllCommunitiesContainerView.isHidden = true
+        self.MultipleImageContainerView.isHidden = true
     }
 
     func home(){
@@ -93,6 +101,38 @@ class MainViewController: UIViewController {
         self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
         self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
     }
+    
+    func Notif_page(){
+        btnreset()
+        self.containerviewreset()
+        self.NotificationContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func Comment_page(){
+        btnreset()
+        self.containerviewreset()
+        self.MultipleImageContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    func groups_page(){
+        btnreset()
+        self.containerviewreset()
+        self.AllgroupsContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func countries_page(){
+        btnreset()
+        self.containerviewreset()
+        self.AllCommunitiesContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
     
     func settings_page(){
         btnreset()

@@ -20,6 +20,9 @@
 		9E3CC44C26D199CD005CDBCD /* SearchViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC44B26D199CD005CDBCD /* SearchViewController.swift */; };
 		9E3CC44F26D199E8005CDBCD /* SearchTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC44E26D199E8005CDBCD /* SearchTableViewCell.swift */; };
 		9E3CC45226D19F3C005CDBCD /* DiscoverViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E3CC45126D19F3C005CDBCD /* DiscoverViewController.swift */; };
+		9E49A6F126D57E9100573D2B /* AccountPageViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A6F026D57E9100573D2B /* AccountPageViewController.swift */; };
+		9E49A6F326D57FB500573D2B /* InformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A6F226D57FB500573D2B /* InformationViewController.swift */; };
+		9E49A6F526D57FC200573D2B /* PostsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E49A6F426D57FC200573D2B /* PostsViewController.swift */; };
 		9E5C33DD26C80D7B00CCFF85 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C33DC26C80D7B00CCFF85 /* AppDelegate.swift */; };
 		9E5C33DF26C80D7B00CCFF85 /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C33DE26C80D7B00CCFF85 /* SceneDelegate.swift */; };
 		9E5C33E426C80D7B00CCFF85 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 9E5C33E226C80D7B00CCFF85 /* Main.storyboard */; };
@@ -34,6 +37,30 @@
 		9E5C341826C84A1D00CCFF85 /* SignUpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341726C84A1D00CCFF85 /* SignUpNextViewController.swift */; };
 		9E5C341A26C851A200CCFF85 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341926C851A200CCFF85 /* SignInViewController.swift */; };
 		9E5C341C26C857B100CCFF85 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341B26C857B100CCFF85 /* VerificationViewController.swift */; };
+		9ECD0C0626DB7ABB00CAD0E2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0526DB7ABB00CAD0E2 /* InterestsViewController.swift */; };
+		9ECD0C0826DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0726DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift */; };
+		9ECD0C0A26DBA1F300CAD0E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */; };
+		9ECD0C0D26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0C26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift */; };
+		9ECD0C0F26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0E26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift */; };
+		9ECD0C1126DBA97100CAD0E2 /* Notification_3TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1026DBA97100CAD0E2 /* Notification_3TableViewCell.swift */; };
+		9ECD0C1326DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1226DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift */; };
+		9ECD0C1526DC00E400CAD0E2 /* AllGroupsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1426DC00E400CAD0E2 /* AllGroupsViewController.swift */; };
+		9ECD0C1726DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1626DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift */; };
+		9ECD0C1926DC114300CAD0E2 /* AllCommunitiesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1826DC114300CAD0E2 /* AllCommunitiesViewController.swift */; };
+		9ECD0C1B26DC162D00CAD0E2 /* MultipleImagesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1A26DC162D00CAD0E2 /* MultipleImagesViewController.swift */; };
+		9ECD0C1E26DC291300CAD0E2 /* WhatsOnTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1D26DC291300CAD0E2 /* WhatsOnTableViewCell.swift */; };
+		9ECD0C2026DC292100CAD0E2 /* StoriesTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C1F26DC292100CAD0E2 /* StoriesTableViewCell.swift */; };
+		9ECD0C2226DC293000CAD0E2 /* PopularGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C2126DC293000CAD0E2 /* PopularGroupsTableViewCell.swift */; };
+		9ECD0C2526DC295200CAD0E2 /* StoriesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C2426DC295200CAD0E2 /* StoriesCollectionViewCell.swift */; };
+		9ECD0C2926DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C2826DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift */; };
+		9ECD0C2B26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C2A26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift */; };
+		9ECD0C2D26DC342300CAD0E2 /* CompaTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C2C26DC342300CAD0E2 /* CompaTableViewCell.swift */; };
+		9ED1067C26DAB99F00F90278 /* InformationDescTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1067B26DAB99F00F90278 /* InformationDescTableViewCell.swift */; };
+		9ED1067E26DAB9C200F90278 /* InterestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1067D26DAB9C200F90278 /* InterestsTableViewCell.swift */; };
+		9ED1068026DABA1600F90278 /* AccountsInterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1067F26DABA1600F90278 /* AccountsInterestsViewController.swift */; };
+		9ED1068226DAC31300F90278 /* AccountGroupsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1068126DAC31300F90278 /* AccountGroupsTableViewCell.swift */; };
+		9ED1068426DAC4E600F90278 /* GroupsCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1068326DAC4E600F90278 /* GroupsCollectionViewCell.swift */; };
+		9ED1068626DACE7900F90278 /* PoatsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED1068526DACE7900F90278 /* PoatsTableViewCell.swift */; };
 		9ED8AD7C26D42C7400789C71 /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8AD7B26D42C7400789C71 /* SettingsViewController.swift */; };
 		9ED8AD7F26D42CB000789C71 /* ProfileNameTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8AD7E26D42CB000789C71 /* ProfileNameTableViewCell.swift */; };
 		9ED8AD8126D42CC100789C71 /* ProfileMailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8AD8026D42CC100789C71 /* ProfileMailTableViewCell.swift */; };
@@ -74,6 +101,9 @@
 		9E3CC44B26D199CD005CDBCD /* SearchViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchViewController.swift; sourceTree = "<group>"; };
 		9E3CC44E26D199E8005CDBCD /* SearchTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchTableViewCell.swift; sourceTree = "<group>"; };
 		9E3CC45126D19F3C005CDBCD /* DiscoverViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiscoverViewController.swift; sourceTree = "<group>"; };
+		9E49A6F026D57E9100573D2B /* AccountPageViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountPageViewController.swift; sourceTree = "<group>"; };
+		9E49A6F226D57FB500573D2B /* InformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationViewController.swift; sourceTree = "<group>"; };
+		9E49A6F426D57FC200573D2B /* PostsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostsViewController.swift; sourceTree = "<group>"; };
 		9E5C33D926C80D7B00CCFF85 /* Marcy.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Marcy.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		9E5C33DC26C80D7B00CCFF85 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		9E5C33DE26C80D7B00CCFF85 /* SceneDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SceneDelegate.swift; sourceTree = "<group>"; };
@@ -94,6 +124,30 @@
 		9E5C341726C84A1D00CCFF85 /* SignUpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextViewController.swift; sourceTree = "<group>"; };
 		9E5C341926C851A200CCFF85 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9E5C341B26C857B100CCFF85 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		9ECD0C0526DB7ABB00CAD0E2 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
+		9ECD0C0726DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInterestsTableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
+		9ECD0C0C26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification_1TableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C0E26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification_2TableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C1026DBA97100CAD0E2 /* Notification_3TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notification_3TableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C1226DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FriendRequestCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C1426DC00E400CAD0E2 /* AllGroupsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupsViewController.swift; sourceTree = "<group>"; };
+		9ECD0C1626DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllGroupCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C1826DC114300CAD0E2 /* AllCommunitiesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AllCommunitiesViewController.swift; sourceTree = "<group>"; };
+		9ECD0C1A26DC162D00CAD0E2 /* MultipleImagesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultipleImagesViewController.swift; sourceTree = "<group>"; };
+		9ECD0C1D26DC291300CAD0E2 /* WhatsOnTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WhatsOnTableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C1F26DC292100CAD0E2 /* StoriesTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesTableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C2126DC293000CAD0E2 /* PopularGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopularGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C2426DC295200CAD0E2 /* StoriesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C2826DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PopGroupsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C2A26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Feed_1TableViewCell.swift; sourceTree = "<group>"; };
+		9ECD0C2C26DC342300CAD0E2 /* CompaTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompaTableViewCell.swift; sourceTree = "<group>"; };
+		9ED1067B26DAB99F00F90278 /* InformationDescTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InformationDescTableViewCell.swift; sourceTree = "<group>"; };
+		9ED1067D26DAB9C200F90278 /* InterestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsTableViewCell.swift; sourceTree = "<group>"; };
+		9ED1067F26DABA1600F90278 /* AccountsInterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInterestsViewController.swift; sourceTree = "<group>"; };
+		9ED1068126DAC31300F90278 /* AccountGroupsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountGroupsTableViewCell.swift; sourceTree = "<group>"; };
+		9ED1068326DAC4E600F90278 /* GroupsCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GroupsCollectionViewCell.swift; sourceTree = "<group>"; };
+		9ED1068526DACE7900F90278 /* PoatsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PoatsTableViewCell.swift; sourceTree = "<group>"; };
 		9ED8AD7B26D42C7400789C71 /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
 		9ED8AD7E26D42CB000789C71 /* ProfileNameTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileNameTableViewCell.swift; sourceTree = "<group>"; };
 		9ED8AD8026D42CC100789C71 /* ProfileMailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ProfileMailTableViewCell.swift; sourceTree = "<group>"; };
@@ -182,7 +236,12 @@
 		9E3CC45026D19F25005CDBCD /* Discover */ = {
 			isa = PBXGroup;
 			children = (
+				9ECD0C1C26DC28F100CAD0E2 /* DiscoverPage Cells */,
+				9ECD0C0B26DBA41D00CAD0E2 /* cells */,
 				9E3CC45126D19F3C005CDBCD /* DiscoverViewController.swift */,
+				9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */,
+				9ECD0C1426DC00E400CAD0E2 /* AllGroupsViewController.swift */,
+				9ECD0C1826DC114300CAD0E2 /* AllCommunitiesViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -270,11 +329,65 @@
 			path = SignUp;
 			sourceTree = "<group>";
 		};
+		9ECD0C0B26DBA41D00CAD0E2 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD0C0C26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift */,
+				9ECD0C0E26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift */,
+				9ECD0C1026DBA97100CAD0E2 /* Notification_3TableViewCell.swift */,
+				9ECD0C1226DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift */,
+				9ECD0C1626DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift */,
+				9ECD0C1A26DC162D00CAD0E2 /* MultipleImagesViewController.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
+		9ECD0C1C26DC28F100CAD0E2 /* DiscoverPage Cells */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD0C2326DC293800CAD0E2 /* CollectionViewCell */,
+				9ECD0C1D26DC291300CAD0E2 /* WhatsOnTableViewCell.swift */,
+				9ECD0C1F26DC292100CAD0E2 /* StoriesTableViewCell.swift */,
+				9ECD0C2126DC293000CAD0E2 /* PopularGroupsTableViewCell.swift */,
+				9ECD0C2A26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift */,
+				9ECD0C2C26DC342300CAD0E2 /* CompaTableViewCell.swift */,
+			);
+			path = "DiscoverPage Cells";
+			sourceTree = "<group>";
+		};
+		9ECD0C2326DC293800CAD0E2 /* CollectionViewCell */ = {
+			isa = PBXGroup;
+			children = (
+				9ECD0C2426DC295200CAD0E2 /* StoriesCollectionViewCell.swift */,
+				9ECD0C2826DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift */,
+			);
+			path = CollectionViewCell;
+			sourceTree = "<group>";
+		};
+		9ED1067A26DAB97000F90278 /* cells */ = {
+			isa = PBXGroup;
+			children = (
+				9ED1067B26DAB99F00F90278 /* InformationDescTableViewCell.swift */,
+				9ED1067D26DAB9C200F90278 /* InterestsTableViewCell.swift */,
+				9ED1068126DAC31300F90278 /* AccountGroupsTableViewCell.swift */,
+				9ED1068326DAC4E600F90278 /* GroupsCollectionViewCell.swift */,
+				9ED1068526DACE7900F90278 /* PoatsTableViewCell.swift */,
+				9ECD0C0726DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift */,
+			);
+			path = cells;
+			sourceTree = "<group>";
+		};
 		9ED8AD7926D42C5900789C71 /* Accounts */ = {
 			isa = PBXGroup;
 			children = (
+				9ED1067A26DAB97000F90278 /* cells */,
 				9ED8AD7A26D42C6200789C71 /* Settings */,
 				9ED8AD8426D432AA00789C71 /* AccountsViewController.swift */,
+				9E49A6F026D57E9100573D2B /* AccountPageViewController.swift */,
+				9E49A6F226D57FB500573D2B /* InformationViewController.swift */,
+				9E49A6F426D57FC200573D2B /* PostsViewController.swift */,
+				9ED1067F26DABA1600F90278 /* AccountsInterestsViewController.swift */,
+				9ECD0C0526DB7ABB00CAD0E2 /* InterestsViewController.swift */,
 			);
 			path = Accounts;
 			sourceTree = "<group>";
@@ -510,33 +623,60 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				9ED1068426DAC4E600F90278 /* GroupsCollectionViewCell.swift in Sources */,
 				9E5C341426C83B1000CCFF85 /* SignupViewController.swift in Sources */,
 				9E047F8326CEF04800B757EF /* MessageChatViewController.swift in Sources */,
+				9ECD0C2526DC295200CAD0E2 /* StoriesCollectionViewCell.swift in Sources */,
 				9ED8AD8126D42CC100789C71 /* ProfileMailTableViewCell.swift in Sources */,
+				9ECD0C1926DC114300CAD0E2 /* AllCommunitiesViewController.swift in Sources */,
+				9ECD0C2D26DC342300CAD0E2 /* CompaTableViewCell.swift in Sources */,
 				9E5C33DD26C80D7B00CCFF85 /* AppDelegate.swift in Sources */,
+				9ECD0C2026DC292100CAD0E2 /* StoriesTableViewCell.swift in Sources */,
+				9ED1068226DAC31300F90278 /* AccountGroupsTableViewCell.swift in Sources */,
+				9ECD0C0F26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift in Sources */,
 				9E047F8B26CEF3EB00B757EF /* MessageJustNowTableViewCell.swift in Sources */,
 				9E5C33DF26C80D7B00CCFF85 /* SceneDelegate.swift in Sources */,
 				9E047F8526CEF3A100B757EF /* MessageClientTableViewCell.swift in Sources */,
+				9ED1068626DACE7900F90278 /* PoatsTableViewCell.swift in Sources */,
+				9ECD0C1E26DC291300CAD0E2 /* WhatsOnTableViewCell.swift in Sources */,
+				9E49A6F126D57E9100573D2B /* AccountPageViewController.swift in Sources */,
 				9E3CC44F26D199E8005CDBCD /* SearchTableViewCell.swift in Sources */,
+				9ECD0C2226DC293000CAD0E2 /* PopularGroupsTableViewCell.swift in Sources */,
 				9ED8AD8326D42CD300789C71 /* ProfileLogoutTableViewCell.swift in Sources */,
 				9E2452E026CD0DA700D8AD4B /* ChatuserTableViewCell.swift in Sources */,
 				9E047F8926CEF3DA00B757EF /* MessageAudioTableViewCell.swift in Sources */,
 				9E5C341126C818B800CCFF85 /* View+Extensions.swift in Sources */,
 				9E047F8726CEF3C900B757EF /* MessageUserTableViewCell.swift in Sources */,
 				9E3CC44C26D199CD005CDBCD /* SearchViewController.swift in Sources */,
+				9ECD0C0D26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift in Sources */,
+				9ECD0C1126DBA97100CAD0E2 /* Notification_3TableViewCell.swift in Sources */,
 				9E5C341A26C851A200CCFF85 /* SignInViewController.swift in Sources */,
 				9E5C340E26C817D700CCFF85 /* FirstViewController.swift in Sources */,
 				9E5C341C26C857B100CCFF85 /* VerificationViewController.swift in Sources */,
+				9ECD0C0626DB7ABB00CAD0E2 /* InterestsViewController.swift in Sources */,
 				9ED8AD7C26D42C7400789C71 /* SettingsViewController.swift in Sources */,
 				9E5C341826C84A1D00CCFF85 /* SignUpNextViewController.swift in Sources */,
 				9E2452E226CD0DE400D8AD4B /* FrequentUserCollectionViewCell.swift in Sources */,
+				9ECD0C1B26DC162D00CAD0E2 /* MultipleImagesViewController.swift in Sources */,
 				9E5C341626C846F000CCFF85 /* DeviceModel.swift in Sources */,
+				9E49A6F326D57FB500573D2B /* InformationViewController.swift in Sources */,
 				9E2452DB26CD0BFB00D8AD4B /* MessagesViewController.swift in Sources */,
+				9ECD0C2B26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift in Sources */,
+				9E49A6F526D57FC200573D2B /* PostsViewController.swift in Sources */,
+				9ED1068026DABA1600F90278 /* AccountsInterestsViewController.swift in Sources */,
+				9ED1067C26DAB99F00F90278 /* InformationDescTableViewCell.swift in Sources */,
 				9E3CC45226D19F3C005CDBCD /* DiscoverViewController.swift in Sources */,
+				9ED1067E26DAB9C200F90278 /* InterestsTableViewCell.swift in Sources */,
+				9ECD0C2926DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift in Sources */,
+				9ECD0C1526DC00E400CAD0E2 /* AllGroupsViewController.swift in Sources */,
+				9ECD0C0826DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift in Sources */,
 				9E2452DE26CD0D4600D8AD4B /* FrequentUserTableViewCell.swift in Sources */,
+				9ECD0C1326DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift in Sources */,
+				9ECD0C0A26DBA1F300CAD0E2 /* NotificationViewController.swift in Sources */,
 				9ED8AD7F26D42CB000789C71 /* ProfileNameTableViewCell.swift in Sources */,
 				9ED8AD8526D432AA00789C71 /* AccountsViewController.swift in Sources */,
 				9EEC95F026CAED7C0082C8E0 /* MainViewController.swift in Sources */,
+				9ECD0C1726DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
