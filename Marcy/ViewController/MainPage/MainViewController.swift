@@ -25,7 +25,11 @@ class MainViewController: UIViewController {
     @IBOutlet weak var AllgroupsContainerView: UIView!
     @IBOutlet weak var AllCommunitiesContainerView: UIView!
     @IBOutlet weak var MultipleImageContainerView: UIView!
-    
+    @IBOutlet weak var CountryGrpContainerView: UIView!
+    @IBOutlet weak var CreatePostContainerView: UIView!
+    @IBOutlet weak var StoriesContainerView: UIView!
+    @IBOutlet weak var StoriesviewContainerView: UIView!
+    @IBOutlet weak var UserProfileContainerview: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -66,6 +70,12 @@ class MainViewController: UIViewController {
         self.AllgroupsContainerView.isHidden = true
         self.AllCommunitiesContainerView.isHidden = true
         self.MultipleImageContainerView.isHidden = true
+        self.CountryGrpContainerView.isHidden = true
+        self.CreatePostContainerView.isHidden = true
+        self.StoriesContainerView.isHidden = true
+        self.StoriesviewContainerView.isHidden = true
+        self.UserProfileContainerview.isHidden = true
+        
     }
 
     func home(){
@@ -141,6 +151,47 @@ class MainViewController: UIViewController {
         self.Accountbtn.setImage(UIImage(named: "Profile_selected"), for: .normal)
         self.AccountLbl.textColor = UIColor(hexString: "#DBAC40")
     }
+    func country_grp(){
+        btnreset()
+        self.containerviewreset()
+        self.CountryGrpContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func create_post(){
+        btnreset()
+        self.containerviewreset()
+        self.CreatePostContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func stories(){
+        btnreset()
+        self.containerviewreset()
+        self.StoriesContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func stories_view(){
+        btnreset()
+        self.containerviewreset()
+        self.StoriesviewContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func user_profile(){
+        btnreset()
+        self.containerviewreset()
+        self.UserProfileContainerview.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    
    
     @IBAction func HpmeBtnOnPressed(_ sender: Any) {
         home()

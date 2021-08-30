@@ -38,6 +38,10 @@ extension AllCommunitiesViewController:UICollectionViewDelegate,UICollectionView
         cell.ThumbnailImage.image = Loc_images[indexPath.row]
         return cell
     }
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if let parent = self.parent as? MainViewController{
+            parent.country_grp()
+        }
+    }
     
 }

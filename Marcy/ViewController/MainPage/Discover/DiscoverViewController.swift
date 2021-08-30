@@ -44,7 +44,7 @@ class DiscoverViewController: UIViewController {
 
 }
 
-extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource{
+extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UIImagePickerControllerDelegate,UINavigationControllerDelegate{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -58,6 +58,8 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 1{
             let cell = tableView.dequeueReusableCell(withIdentifier: "StoriesTableViewCell", for: indexPath) as! StoriesTableViewCell
+            cell.SeeAllBtn.addTarget(self, action: #selector(stories(_:)), for: .touchUpInside)
+            cell.SeeAllBtn.tag = indexPath.row
             cell.CollectionView.tag = indexPath.row
             cell.CollectionView.reloadData()
             return cell
@@ -126,6 +128,14 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
             cell.ThumbnailImage.image = UIImage(named: "Feed6")
             cell.Btn.isHidden = true
             return cell
+        }
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 0{
+            if let parent = self.parent as? MainViewController{
+                parent.create_post()
+            }
         }
     }
     
@@ -214,6 +224,14 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
     }
     
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if collectionView.tag == 1{
+            if indexPath.item == 0{
+                self.openCamera()
+            }
+        }
+    }
+    
     @objc func commentsPage(_ sender:UIButton){
         if let parent = self.parent as? MainViewController{
             parent.Comment_page()
@@ -229,6 +247,31 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
     @objc func AllCommunities(_ sender:UIButton){
         if let parent = self.parent as? MainViewController{
             parent.countries_page()
+        }
+    }
+    
+    @objc func stories(_ sender:UIButton){
+        if let parent = self.parent as? MainViewController{
+            parent.stories()
+        }
+    }
+    
+    
+    
+    func openCamera()
+    {
+        if UIImagePickerController.isSourceTypeAvailable(UIImagePickerController.SourceType.camera) {
+            let imagePicker = UIImagePickerController()
+            imagePicker.delegate = self
+            imagePicker.sourceType = UIImagePickerController.SourceType.camera
+            imagePicker.allowsEditing = false
+            self.present(imagePicker, animated: true, completion: nil)
+        }
+        else
+        {
+            let alert  = UIAlertController(title: "Warning", message: "You don't have camera", preferredStyle: .alert)
+            alert.addAction(UIAlertAction(title: "OK", style: .default, handler: nil))
+            self.present(alert, animated: true, completion: nil)
         }
     }
 }

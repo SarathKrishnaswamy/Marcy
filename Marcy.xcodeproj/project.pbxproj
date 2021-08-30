@@ -37,6 +37,17 @@
 		9E5C341826C84A1D00CCFF85 /* SignUpNextViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341726C84A1D00CCFF85 /* SignUpNextViewController.swift */; };
 		9E5C341A26C851A200CCFF85 /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341926C851A200CCFF85 /* SignInViewController.swift */; };
 		9E5C341C26C857B100CCFF85 /* VerificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9E5C341B26C857B100CCFF85 /* VerificationViewController.swift */; };
+		9EB5F54626DD45E300DE06B6 /* StoriesLivesViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54526DD45E300DE06B6 /* StoriesLivesViewController.swift */; };
+		9EB5F54826DD45FB00DE06B6 /* StoriesLivesCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54726DD45FB00DE06B6 /* StoriesLivesCollectionViewCell.swift */; };
+		9EB5F54A26DD574E00DE06B6 /* StoriesViewViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54926DD574E00DE06B6 /* StoriesViewViewController.swift */; };
+		9EB5F54C26DD59B200DE06B6 /* StoriesViewCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54B26DD59B200DE06B6 /* StoriesViewCollectionViewCell.swift */; };
+		9EB5F54E26DD5F9E00DE06B6 /* StoriesReactsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54D26DD5F9E00DE06B6 /* StoriesReactsViewController.swift */; };
+		9EB5F55026DD640000DE06B6 /* UserProfileViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F54F26DD640000DE06B6 /* UserProfileViewController.swift */; };
+		9EB5F55226DD660100DE06B6 /* UserProfileInformationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F55126DD660100DE06B6 /* UserProfileInformationViewController.swift */; };
+		9EB5F55426DD662800DE06B6 /* UserProfilePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB5F55326DD662800DE06B6 /* UserProfilePostViewController.swift */; };
+		9EB792E126DD3971001D5638 /* CountryGrpTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB792E026DD3971001D5638 /* CountryGrpTableViewCell.swift */; };
+		9EB792E326DD398E001D5638 /* CountryGrpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB792E226DD398E001D5638 /* CountryGrpViewController.swift */; };
+		9EB792E526DD405A001D5638 /* CreatePostViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EB792E426DD405A001D5638 /* CreatePostViewController.swift */; };
 		9ECD0C0626DB7ABB00CAD0E2 /* InterestsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0526DB7ABB00CAD0E2 /* InterestsViewController.swift */; };
 		9ECD0C0826DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0726DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift */; };
 		9ECD0C0A26DBA1F300CAD0E2 /* NotificationViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */; };
@@ -124,6 +135,17 @@
 		9E5C341726C84A1D00CCFF85 /* SignUpNextViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpNextViewController.swift; sourceTree = "<group>"; };
 		9E5C341926C851A200CCFF85 /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
 		9E5C341B26C857B100CCFF85 /* VerificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VerificationViewController.swift; sourceTree = "<group>"; };
+		9EB5F54526DD45E300DE06B6 /* StoriesLivesViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesLivesViewController.swift; sourceTree = "<group>"; };
+		9EB5F54726DD45FB00DE06B6 /* StoriesLivesCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesLivesCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EB5F54926DD574E00DE06B6 /* StoriesViewViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewViewController.swift; sourceTree = "<group>"; };
+		9EB5F54B26DD59B200DE06B6 /* StoriesViewCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesViewCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EB5F54D26DD5F9E00DE06B6 /* StoriesReactsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoriesReactsViewController.swift; sourceTree = "<group>"; };
+		9EB5F54F26DD640000DE06B6 /* UserProfileViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileViewController.swift; sourceTree = "<group>"; };
+		9EB5F55126DD660100DE06B6 /* UserProfileInformationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfileInformationViewController.swift; sourceTree = "<group>"; };
+		9EB5F55326DD662800DE06B6 /* UserProfilePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserProfilePostViewController.swift; sourceTree = "<group>"; };
+		9EB792E026DD3971001D5638 /* CountryGrpTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryGrpTableViewCell.swift; sourceTree = "<group>"; };
+		9EB792E226DD398E001D5638 /* CountryGrpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CountryGrpViewController.swift; sourceTree = "<group>"; };
+		9EB792E426DD405A001D5638 /* CreatePostViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CreatePostViewController.swift; sourceTree = "<group>"; };
 		9ECD0C0526DB7ABB00CAD0E2 /* InterestsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InterestsViewController.swift; sourceTree = "<group>"; };
 		9ECD0C0726DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsInterestsTableViewCell.swift; sourceTree = "<group>"; };
 		9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NotificationViewController.swift; sourceTree = "<group>"; };
@@ -242,6 +264,14 @@
 				9ECD0C0926DBA1F300CAD0E2 /* NotificationViewController.swift */,
 				9ECD0C1426DC00E400CAD0E2 /* AllGroupsViewController.swift */,
 				9ECD0C1826DC114300CAD0E2 /* AllCommunitiesViewController.swift */,
+				9EB792E226DD398E001D5638 /* CountryGrpViewController.swift */,
+				9EB792E426DD405A001D5638 /* CreatePostViewController.swift */,
+				9EB5F54526DD45E300DE06B6 /* StoriesLivesViewController.swift */,
+				9EB5F54926DD574E00DE06B6 /* StoriesViewViewController.swift */,
+				9EB5F54D26DD5F9E00DE06B6 /* StoriesReactsViewController.swift */,
+				9EB5F54F26DD640000DE06B6 /* UserProfileViewController.swift */,
+				9EB5F55126DD660100DE06B6 /* UserProfileInformationViewController.swift */,
+				9EB5F55326DD662800DE06B6 /* UserProfilePostViewController.swift */,
 			);
 			path = Discover;
 			sourceTree = "<group>";
@@ -332,12 +362,15 @@
 		9ECD0C0B26DBA41D00CAD0E2 /* cells */ = {
 			isa = PBXGroup;
 			children = (
+				9EB792E026DD3971001D5638 /* CountryGrpTableViewCell.swift */,
 				9ECD0C0C26DBA46F00CAD0E2 /* Notification_1TableViewCell.swift */,
 				9ECD0C0E26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift */,
 				9ECD0C1026DBA97100CAD0E2 /* Notification_3TableViewCell.swift */,
 				9ECD0C1226DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift */,
 				9ECD0C1626DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift */,
 				9ECD0C1A26DC162D00CAD0E2 /* MultipleImagesViewController.swift */,
+				9EB5F54726DD45FB00DE06B6 /* StoriesLivesCollectionViewCell.swift */,
+				9EB5F54B26DD59B200DE06B6 /* StoriesViewCollectionViewCell.swift */,
 			);
 			path = cells;
 			sourceTree = "<group>";
@@ -624,17 +657,23 @@
 			buildActionMask = 2147483647;
 			files = (
 				9ED1068426DAC4E600F90278 /* GroupsCollectionViewCell.swift in Sources */,
+				9EB5F54C26DD59B200DE06B6 /* StoriesViewCollectionViewCell.swift in Sources */,
 				9E5C341426C83B1000CCFF85 /* SignupViewController.swift in Sources */,
+				9EB792E126DD3971001D5638 /* CountryGrpTableViewCell.swift in Sources */,
 				9E047F8326CEF04800B757EF /* MessageChatViewController.swift in Sources */,
 				9ECD0C2526DC295200CAD0E2 /* StoriesCollectionViewCell.swift in Sources */,
+				9EB792E326DD398E001D5638 /* CountryGrpViewController.swift in Sources */,
 				9ED8AD8126D42CC100789C71 /* ProfileMailTableViewCell.swift in Sources */,
 				9ECD0C1926DC114300CAD0E2 /* AllCommunitiesViewController.swift in Sources */,
 				9ECD0C2D26DC342300CAD0E2 /* CompaTableViewCell.swift in Sources */,
+				9EB5F54E26DD5F9E00DE06B6 /* StoriesReactsViewController.swift in Sources */,
 				9E5C33DD26C80D7B00CCFF85 /* AppDelegate.swift in Sources */,
 				9ECD0C2026DC292100CAD0E2 /* StoriesTableViewCell.swift in Sources */,
 				9ED1068226DAC31300F90278 /* AccountGroupsTableViewCell.swift in Sources */,
 				9ECD0C0F26DBA4DF00CAD0E2 /* Notification_2TableViewCell.swift in Sources */,
 				9E047F8B26CEF3EB00B757EF /* MessageJustNowTableViewCell.swift in Sources */,
+				9EB5F55026DD640000DE06B6 /* UserProfileViewController.swift in Sources */,
+				9EB5F54626DD45E300DE06B6 /* StoriesLivesViewController.swift in Sources */,
 				9E5C33DF26C80D7B00CCFF85 /* SceneDelegate.swift in Sources */,
 				9E047F8526CEF3A100B757EF /* MessageClientTableViewCell.swift in Sources */,
 				9ED1068626DACE7900F90278 /* PoatsTableViewCell.swift in Sources */,
@@ -657,9 +696,12 @@
 				9ED8AD7C26D42C7400789C71 /* SettingsViewController.swift in Sources */,
 				9E5C341826C84A1D00CCFF85 /* SignUpNextViewController.swift in Sources */,
 				9E2452E226CD0DE400D8AD4B /* FrequentUserCollectionViewCell.swift in Sources */,
+				9EB5F55426DD662800DE06B6 /* UserProfilePostViewController.swift in Sources */,
 				9ECD0C1B26DC162D00CAD0E2 /* MultipleImagesViewController.swift in Sources */,
 				9E5C341626C846F000CCFF85 /* DeviceModel.swift in Sources */,
 				9E49A6F326D57FB500573D2B /* InformationViewController.swift in Sources */,
+				9EB5F54826DD45FB00DE06B6 /* StoriesLivesCollectionViewCell.swift in Sources */,
+				9EB5F54A26DD574E00DE06B6 /* StoriesViewViewController.swift in Sources */,
 				9E2452DB26CD0BFB00D8AD4B /* MessagesViewController.swift in Sources */,
 				9ECD0C2B26DC2F7800CAD0E2 /* Feed_1TableViewCell.swift in Sources */,
 				9E49A6F526D57FC200573D2B /* PostsViewController.swift in Sources */,
@@ -670,8 +712,10 @@
 				9ECD0C2926DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift in Sources */,
 				9ECD0C1526DC00E400CAD0E2 /* AllGroupsViewController.swift in Sources */,
 				9ECD0C0826DB7EF200CAD0E2 /* AccountsInterestsTableViewCell.swift in Sources */,
+				9EB792E526DD405A001D5638 /* CreatePostViewController.swift in Sources */,
 				9E2452DE26CD0D4600D8AD4B /* FrequentUserTableViewCell.swift in Sources */,
 				9ECD0C1326DBA9F900CAD0E2 /* FriendRequestCollectionViewCell.swift in Sources */,
+				9EB5F55226DD660100DE06B6 /* UserProfileInformationViewController.swift in Sources */,
 				9ECD0C0A26DBA1F300CAD0E2 /* NotificationViewController.swift in Sources */,
 				9ED8AD7F26D42CB000789C71 /* ProfileNameTableViewCell.swift in Sources */,
 				9ED8AD8526D432AA00789C71 /* AccountsViewController.swift in Sources */,
