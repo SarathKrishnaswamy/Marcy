@@ -14,8 +14,21 @@ class StoriesTableViewCell: UITableViewCell {
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        configureCollectionView()
     }
 
+    func configureCollectionView(){
+    
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/3.7, height: 179)
+        layout.minimumInteritemSpacing = 10
+        layout.scrollDirection = .horizontal
+        layout.minimumLineSpacing = 10
+        CollectionView.collectionViewLayout = layout
+        
+    }
+    
     override func setSelected(_ selected: Bool, animated: Bool) {
         super.setSelected(selected, animated: animated)
 

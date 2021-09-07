@@ -12,9 +12,9 @@ class DiscoverViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
-    var story_image = [UIImage(named: "Item_1"),UIImage(named: "Item_2"),UIImage(named: "Item_3"),UIImage(named: "Item_4")]
+    var story_image = [UIImage(named: "Item"),UIImage(named: "Item_2"),UIImage(named: "Item_3"),UIImage(named: "Item_4")]
     var pop_image = [UIImage(named: "groupe1"),UIImage(named: "groupe2"),UIImage(named: "groupe3"),UIImage(named: "groupe4")]
-    var Loc_images = [UIImage(named: "Loc_1"),UIImage(named: "Loc_2"),UIImage(named: "Loc_3"),UIImage(named: "Loc_4"),UIImage(named: "Loc_5")]
+    var Loc_images = [UIImage(named: "Loc_1"),UIImage(named: "Loc_2"),UIImage(named: "Loc_3"),UIImage(named: "Loc_4"),UIImage(named: "senegal-1")]
     var frnd_bday = [UIImage(named: "userBday1"),UIImage(named: "userBday2"),UIImage(named: "userBday3"),UIImage(named: "userBday4"),UIImage(named: "userBday5")]
     var friend_request = [UIImage(named: "Add1"),UIImage(named: "Add2"),UIImage(named: "Add3"),UIImage(named: "Add4"),UIImage(named: "Add5")]
     
@@ -147,7 +147,7 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
             return 214
         }
         else if indexPath.row == 2{
-            return 170
+            return 165
         }
         else if indexPath.row == 3{
             return 542

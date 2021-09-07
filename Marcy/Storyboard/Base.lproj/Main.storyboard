@@ -1318,7 +1318,7 @@
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="dXW-U5-zDn">
                                                             <rect key="frame" x="15" y="36" width="399" height="179"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
-                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="gAf-tj-pys">
+                                                            <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="5" id="gAf-tj-pys">
                                                                 <size key="itemSize" width="111" height="179"/>
                                                                 <size key="estimatedItemSize" width="111" height="179"/>
                                                                 <size key="headerReferenceSize" width="0.0" height="0.0"/>
@@ -1336,7 +1336,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VMx-2T-DIh">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="111" height="179"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Item_1" translatesAutoresizingMaskIntoConstraints="NO" id="V3I-Wq-oAW">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Item" translatesAutoresizingMaskIntoConstraints="NO" id="V3I-Wq-oAW">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="111" height="179"/>
                                                                                     </imageView>
                                                                                 </subviews>
@@ -1402,7 +1402,7 @@
                                                     <autoresizingMask key="autoresizingMask"/>
                                                     <subviews>
                                                         <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" showsHorizontalScrollIndicator="NO" showsVerticalScrollIndicator="NO" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="EKG-dG-Poj">
-                                                            <rect key="frame" x="15" y="36" width="399" height="124"/>
+                                                            <rect key="frame" x="15" y="22" width="399" height="138"/>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                             <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="10" minimumInteritemSpacing="10" id="cNa-jU-WKU">
                                                                 <size key="itemSize" width="110" height="124"/>
@@ -1413,7 +1413,7 @@
                                                             </collectionViewFlowLayout>
                                                             <cells>
                                                                 <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PopGroupsCollectionViewCell" id="LkA-Jf-MIP" customClass="PopGroupsCollectionViewCell" customModule="Marcy" customModuleProvider="target">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
+                                                                    <rect key="frame" x="0.0" y="7" width="110" height="124"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                     <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="4BN-5b-Rnc">
                                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
@@ -1422,7 +1422,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ZWn-yG-ulO">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="groupe1" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-t1-L3X">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="groupe1" translatesAutoresizingMaskIntoConstraints="NO" id="e1D-t1-L3X">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
                                                                                     </imageView>
                                                                                 </subviews>
@@ -1467,7 +1467,7 @@
                                                     <constraints>
                                                         <constraint firstAttribute="bottom" secondItem="EKG-dG-Poj" secondAttribute="bottom" constant="10" id="3rc-ko-2k7"/>
                                                         <constraint firstItem="Alh-wC-dyq" firstAttribute="top" secondItem="QGZ-yJ-2g9" secondAttribute="top" constant="5" id="6VB-mv-Mcu"/>
-                                                        <constraint firstItem="EKG-dG-Poj" firstAttribute="top" secondItem="Alh-wC-dyq" secondAttribute="bottom" constant="14" id="RIG-XG-kq8"/>
+                                                        <constraint firstItem="EKG-dG-Poj" firstAttribute="top" secondItem="Alh-wC-dyq" secondAttribute="bottom" id="RIG-XG-kq8"/>
                                                         <constraint firstItem="EKG-dG-Poj" firstAttribute="leading" secondItem="QGZ-yJ-2g9" secondAttribute="leading" constant="15" id="Z3V-OR-I3a"/>
                                                         <constraint firstAttribute="trailing" secondItem="TqT-1C-YlW" secondAttribute="trailing" constant="10" id="akB-zk-fQr"/>
                                                         <constraint firstItem="TqT-1C-YlW" firstAttribute="centerY" secondItem="Alh-wC-dyq" secondAttribute="centerY" id="anI-qS-Mln"/>
@@ -1560,8 +1560,12 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="4c7-hy-IUR">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Loc_1" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-kK-ZdQ">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Loc_1" translatesAutoresizingMaskIntoConstraints="NO" id="LVC-kK-ZdQ">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="124"/>
+                                                                                        <constraints>
+                                                                                            <constraint firstAttribute="width" constant="72.939999999999998" id="Z1o-mR-6Rh"/>
+                                                                                            <constraint firstAttribute="height" constant="107.16" id="zRu-mW-skp"/>
+                                                                                        </constraints>
                                                                                     </imageView>
                                                                                 </subviews>
                                                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -1642,7 +1646,7 @@
                                                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uk9-Mw-nqf">
                                                                                 <rect key="frame" x="0.0" y="0.0" width="110" height="161"/>
                                                                                 <subviews>
-                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="userBday1" translatesAutoresizingMaskIntoConstraints="NO" id="yub-Lq-x0B">
+                                                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="userBday1" translatesAutoresizingMaskIntoConstraints="NO" id="yub-Lq-x0B">
                                                                                         <rect key="frame" x="0.0" y="0.0" width="110" height="161"/>
                                                                                     </imageView>
                                                                                 </subviews>
@@ -3567,7 +3571,7 @@ looking at its layout. The point of using Lorem </string>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bde-Hj-EHG">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="124"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Group_1-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-R9-2X2">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Group_1-1" translatesAutoresizingMaskIntoConstraints="NO" id="gvF-R9-2X2">
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="124"/>
                                                                 </imageView>
                                                             </subviews>
@@ -3683,11 +3687,8 @@ looking at its layout. The point of using Lorem </string>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="L4P-wE-PeK">
                                                             <rect key="frame" x="0.0" y="0.0" width="90" height="124"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Group_1-1" translatesAutoresizingMaskIntoConstraints="NO" id="E9U-In-wVz">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Group_1-1" translatesAutoresizingMaskIntoConstraints="NO" id="E9U-In-wVz">
                                                                     <rect key="frame" x="0.0" y="0.0" width="90" height="124"/>
-                                                                    <constraints>
-                                                                        <constraint firstAttribute="width" constant="90" id="RAp-C6-OGU"/>
-                                                                    </constraints>
                                                                 </imageView>
                                                             </subviews>
                                                             <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -4130,7 +4131,7 @@ looking at its layout. The point of using Lorem </string>
                                                         <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="BAx-0D-3bB">
                                                             <rect key="frame" x="0.0" y="0.0" width="175" height="263"/>
                                                             <subviews>
-                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" fixedFrame="YES" image="Story_1" translatesAutoresizingMaskIntoConstraints="NO" id="u43-hi-DtL">
+                                                                <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" fixedFrame="YES" image="Story_1" translatesAutoresizingMaskIntoConstraints="NO" id="u43-hi-DtL">
                                                                     <rect key="frame" x="1" y="-0.5" width="175" height="263"/>
                                                                     <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 </imageView>
@@ -4170,6 +4171,7 @@ looking at its layout. The point of using Lorem </string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="SM9-46-5Iq"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="ZIK-UR-AX4" secondAttribute="bottom" id="BJ0-df-ty0"/>
@@ -4227,39 +4229,39 @@ looking at its layout. The point of using Lorem </string>
                                                 <nil key="highlightedColor"/>
                                             </label>
                                             <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="Rgt-B4-Iij">
-                                                <rect key="frame" x="0.0" y="43" width="414" height="521"/>
+                                                <rect key="frame" x="10" y="43" width="394" height="521"/>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <collectionViewFlowLayout key="collectionViewLayout" minimumLineSpacing="10" minimumInteritemSpacing="10" id="ApN-pi-oOR">
-                                                    <size key="itemSize" width="99" height="85"/>
-                                                    <size key="estimatedItemSize" width="99" height="85"/>
+                                                    <size key="itemSize" width="102" height="85"/>
+                                                    <size key="estimatedItemSize" width="102" height="85"/>
                                                     <size key="headerReferenceSize" width="0.0" height="0.0"/>
                                                     <size key="footerReferenceSize" width="0.0" height="0.0"/>
                                                     <inset key="sectionInset" minX="10" minY="0.0" maxX="10" maxY="0.0"/>
                                                 </collectionViewFlowLayout>
                                                 <cells>
                                                     <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="StoriesViewCollectionViewCell" id="ZXg-8z-Jyx" customClass="StoriesViewCollectionViewCell" customModule="Marcy" customModuleProvider="target">
-                                                        <rect key="frame" x="10" y="0.0" width="99" height="85"/>
+                                                        <rect key="frame" x="10" y="0.0" width="105" height="105"/>
                                                         <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                         <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="Fk4-1z-pWn">
-                                                            <rect key="frame" x="0.0" y="0.0" width="99" height="85"/>
+                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                                             <autoresizingMask key="autoresizingMask"/>
                                                             <subviews>
                                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="VVp-vk-FmV">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="99" height="85"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                                                     <subviews>
-                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="spectator1" translatesAutoresizingMaskIntoConstraints="NO" id="oW9-uZ-IBz">
-                                                                            <rect key="frame" x="0.0" y="0.0" width="99" height="85"/>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="spectator4" translatesAutoresizingMaskIntoConstraints="NO" id="oW9-uZ-IBz">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="105" height="105"/>
                                                                             <constraints>
-                                                                                <constraint firstAttribute="width" constant="99" id="FLT-5n-r0X"/>
+                                                                                <constraint firstAttribute="height" constant="80" id="RST-vq-ccZ"/>
                                                                             </constraints>
                                                                         </imageView>
                                                                     </subviews>
                                                                     <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                                     <constraints>
-                                                                        <constraint firstAttribute="bottom" secondItem="oW9-uZ-IBz" secondAttribute="bottom" id="644-AO-mXt"/>
-                                                                        <constraint firstAttribute="trailing" secondItem="oW9-uZ-IBz" secondAttribute="trailing" id="Cat-Tc-bVj"/>
-                                                                        <constraint firstItem="oW9-uZ-IBz" firstAttribute="leading" secondItem="VVp-vk-FmV" secondAttribute="leading" id="JHh-UC-5FH"/>
-                                                                        <constraint firstItem="oW9-uZ-IBz" firstAttribute="top" secondItem="VVp-vk-FmV" secondAttribute="top" id="y04-vP-1rz"/>
+                                                                        <constraint firstItem="oW9-uZ-IBz" firstAttribute="top" secondItem="VVp-vk-FmV" secondAttribute="top" id="EEQ-0p-JIa"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="oW9-uZ-IBz" secondAttribute="trailing" id="RcG-QF-VkR"/>
+                                                                        <constraint firstAttribute="bottom" secondItem="oW9-uZ-IBz" secondAttribute="bottom" id="hLw-JG-R6b"/>
+                                                                        <constraint firstItem="oW9-uZ-IBz" firstAttribute="leading" secondItem="VVp-vk-FmV" secondAttribute="leading" id="u4E-V3-nyv"/>
                                                                     </constraints>
                                                                 </view>
                                                             </subviews>
@@ -4270,7 +4272,7 @@ looking at its layout. The point of using Lorem </string>
                                                                 <constraint firstItem="VVp-vk-FmV" firstAttribute="top" secondItem="Fk4-1z-pWn" secondAttribute="top" id="vwT-ce-3P7"/>
                                                             </constraints>
                                                         </collectionViewCellContentView>
-                                                        <size key="customSize" width="99" height="85"/>
+                                                        <size key="customSize" width="105" height="105"/>
                                                         <connections>
                                                             <outlet property="ThumbnailImage" destination="oW9-uZ-IBz" id="tle-RV-hsi"/>
                                                         </connections>
@@ -4286,11 +4288,11 @@ looking at its layout. The point of using Lorem </string>
                                         <constraints>
                                             <constraint firstItem="nXH-Fd-dcn" firstAttribute="leading" secondItem="N35-Ng-3c1" secondAttribute="leading" constant="20" symbolic="YES" id="4rn-u3-Tb5"/>
                                             <constraint firstItem="wBn-tR-Bt7" firstAttribute="leading" secondItem="N35-Ng-3c1" secondAttribute="leading" id="IKC-wd-zz6"/>
-                                            <constraint firstItem="Rgt-B4-Iij" firstAttribute="leading" secondItem="N35-Ng-3c1" secondAttribute="leading" id="Mz1-Ty-YQq"/>
+                                            <constraint firstItem="Rgt-B4-Iij" firstAttribute="leading" secondItem="N35-Ng-3c1" secondAttribute="leading" constant="10" id="Mz1-Ty-YQq"/>
                                             <constraint firstItem="nXH-Fd-dcn" firstAttribute="top" secondItem="N35-Ng-3c1" secondAttribute="top" constant="15" id="OCG-iL-yzL"/>
                                             <constraint firstItem="wBn-tR-Bt7" firstAttribute="top" secondItem="nXH-Fd-dcn" secondAttribute="bottom" constant="5" id="OGp-rM-Wot"/>
                                             <constraint firstAttribute="trailing" secondItem="wBn-tR-Bt7" secondAttribute="trailing" id="RcL-EZ-ysf"/>
-                                            <constraint firstAttribute="trailing" secondItem="Rgt-B4-Iij" secondAttribute="trailing" id="gUe-PI-ZdI"/>
+                                            <constraint firstAttribute="trailing" secondItem="Rgt-B4-Iij" secondAttribute="trailing" constant="10" id="gUe-PI-ZdI"/>
                                             <constraint firstAttribute="bottom" secondItem="Rgt-B4-Iij" secondAttribute="bottom" id="mtd-5p-WKd"/>
                                             <constraint firstItem="Rgt-B4-Iij" firstAttribute="top" secondItem="wBn-tR-Bt7" secondAttribute="bottom" constant="8" symbolic="YES" id="vTW-V4-8n3"/>
                                         </constraints>
@@ -4309,6 +4311,7 @@ looking at its layout. The point of using Lorem </string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="c6q-xn-V1a"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="bottom" secondItem="TDa-zf-4Tn" secondAttribute="bottom" id="8uE-9S-QIg"/>
@@ -4465,6 +4468,7 @@ looking at its layout. The point of using Lorem </string>
                                 </constraints>
                             </view>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7UG-B2-9VR"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstAttribute="trailing" secondItem="sVr-Ww-wiK" secondAttribute="trailing" id="1yn-TL-lAg"/>
@@ -4699,6 +4703,7 @@ is that it has a more-or-less normal </string>
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="Aod-b9-zUX"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="7rf-y2-wje" firstAttribute="leading" secondItem="A4k-mp-KFp" secondAttribute="leading" id="4oQ-Gp-p0k"/>
@@ -4765,6 +4770,7 @@ is that it has a more-or-less normal </string>
                                 </connections>
                             </tableView>
                         </subviews>
+                        <viewLayoutGuide key="safeArea" id="7mU-Oc-CJV"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="48e-UZ-h8H" firstAttribute="leading" secondItem="mid-hh-rJo" secondAttribute="leading" id="7C2-WW-Qce"/>
@@ -4795,7 +4801,7 @@ is that it has a more-or-less normal </string>
         <image name="Image" width="182" height="182"/>
         <image name="Images_tech" width="321" height="60"/>
         <image name="Interests" width="339" height="69"/>
-        <image name="Item_1" width="110.5" height="179"/>
+        <image name="Item" width="101.5" height="167"/>
         <image name="Loc_1" width="110" height="124"/>
         <image name="Message" width="19" height="17"/>
         <image name="Profile" width="18" height="20"/>
@@ -4839,7 +4845,7 @@ is that it has a more-or-less normal </string>
         <image name="search" width="36" height="36"/>
         <image name="see-all-button" width="40" height="12"/>
         <image name="senegal" width="414" height="251.5"/>
-        <image name="spectator1" width="98.5" height="84.5"/>
+        <image name="spectator4" width="98.5" height="81.5"/>
         <image name="stories" width="414" height="896"/>
         <image name="storiesView" width="172" height="124.5"/>
         <image name="user-profile" width="289" height="84"/>

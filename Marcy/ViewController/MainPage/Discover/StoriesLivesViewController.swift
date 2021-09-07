@@ -13,10 +13,22 @@ class StoriesLivesViewController: UIViewController {
     var story_image = [UIImage(named: "Story_1"),UIImage(named: "Story_2"),UIImage(named: "Story_3"),UIImage(named: "Story_4"),UIImage(named: "Story_5"),UIImage(named: "Story_6")]
     override func viewDidLoad() {
         super.viewDidLoad()
+        configureCollectionView()
 
         // Do any additional setup after loading the view.
     }
     
+    func configureCollectionView(){
+    
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/2.14, height: 263)
+        layout.minimumInteritemSpacing = 3
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 5
+        CollectionView.collectionViewLayout = layout
+        
+    }
 
   
     @IBAction func BackbtnonPressed(_ sender: Any) {

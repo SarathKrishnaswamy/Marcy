@@ -16,9 +16,22 @@ class AllCommunitiesViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
 
+        configureCollectionView()
         // Do any additional setup after loading the view.
     }
     
+    func configureCollectionView(){
+    
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/5.4, height: 107.16)
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 0
+        CollectionView.collectionViewLayout = layout
+        
+    }
+
 
     @IBAction func BackBtnOnPressed(_ sender: Any) {
         if let parent = self.parent as? MainViewController {

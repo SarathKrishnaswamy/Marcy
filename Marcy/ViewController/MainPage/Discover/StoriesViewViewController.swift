@@ -16,8 +16,21 @@ class StoriesViewViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.ViewsBg.setRadiusWithShadow(1.0)
+        configureCollectionView()
 
         // Do any additional setup after loading the view.
+    }
+    
+    func configureCollectionView(){
+    
+        let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
+        layout.sectionInset = UIEdgeInsets(top: 5, left: 10, bottom: 5, right: 10)
+        layout.itemSize = CGSize(width:105, height: 80)
+        layout.minimumInteritemSpacing = 0
+        layout.scrollDirection = .vertical
+        layout.minimumLineSpacing = 40
+        Collectionview.collectionViewLayout = layout
+        
     }
     
 
