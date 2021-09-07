@@ -20,8 +20,8 @@ class StoriesTableViewCell: UITableViewCell {
     func configureCollectionView(){
     
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 0, bottom: 5, right: 0)
-        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/3.7, height: 179)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/3.7, height: 189)
         layout.minimumInteritemSpacing = 10
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 10

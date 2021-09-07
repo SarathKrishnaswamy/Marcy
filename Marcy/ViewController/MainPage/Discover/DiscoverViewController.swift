@@ -144,7 +144,7 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
           return 70
         }
        else if indexPath.row == 1{
-            return 214
+            return 224
         }
         else if indexPath.row == 2{
             return 165
