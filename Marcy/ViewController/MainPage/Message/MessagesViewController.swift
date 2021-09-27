@@ -11,10 +11,10 @@ class MessagesViewController: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
     
-    var fu_image = [UIImage(named: "fU_1"),UIImage(named: "fU_2"),UIImage(named: "fU_3"),UIImage(named: "fU_4"),UIImage(named: "fU_5"),UIImage(named: "fU_6")]
-    var border_width = [2.0,0,2.0,2.0,0,0]
+    var fu_image = [UIImage(named: "fuser_1"),UIImage(named: "fuser_2"),UIImage(named: "fuser_3"),UIImage(named: "fuser_4"),UIImage(named: "fuser_5"),UIImage(named: "fuser_6")]
+    var border_width = [0.0,0,0.0,0.0,0,0]
     var online = [false,true,false,false,true,true]
-    var name = ["Dianne","Wisteria","Fleece","Hilary","Parsley","Brian"]
+    var name = ["Gerard","Amber","Fernando","Jane","Richard","Richard"]
     
     var user_name = ["Gunther","Gunther","Burgundy","Hugh","Ingrid","Pamela","Girth"]
     var mins = ["15 min","15 min","32 min","1 hour","5 hour","Mon","Tue"]
@@ -34,7 +34,7 @@ class MessagesViewController: UIViewController {
 
 }
 
-extension MessagesViewController :UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource{
+extension MessagesViewController :UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate,UICollectionViewDataSource,UICollectionViewDelegateFlowLayout{
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -80,13 +80,23 @@ extension MessagesViewController :UITableViewDelegate,UITableViewDataSource,UICo
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 0{
-            return 90
+            return 133
         }
         else{
             return 90
         }
     }
-    
+    func tableView(_ tableView: UITableView, trailingSwipeActionsConfigurationForRowAt indexPath: IndexPath)
+            -> UISwipeActionsConfiguration? {
+            let deleteAction = UIContextualAction(style: .destructive, title: "Delete") { (_, _, completionHandler) in
+                // delete the item here
+                completionHandler(true)
+            }
+            deleteAction.image = UIImage(systemName: "trash")
+            deleteAction.backgroundColor = .systemRed
+            let configuration = UISwipeActionsConfiguration(actions: [deleteAction])
+            return configuration
+    }
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         if collectionView.tag == 0{
             return fu_image.count
@@ -99,7 +109,7 @@ extension MessagesViewController :UITableViewDelegate,UITableViewDataSource,UICo
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if collectionView.tag == 0 {
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FrequentUserCollectionViewCell", for: indexPath) as! FrequentUserCollectionViewCell
-            cell.OnlineView.isHidden = online[indexPath.row]
+            
             cell.UserImage.image = fu_image[indexPath.row]
             cell.StoryView.layer.borderWidth = CGFloat(border_width[indexPath.row])
             cell.FrequentUsernameLbl.text = name[indexPath.row]
@@ -108,13 +118,15 @@ extension MessagesViewController :UITableViewDelegate,UITableViewDataSource,UICo
         }
         else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FrequentUserCollectionViewCell", for: indexPath) as! FrequentUserCollectionViewCell
-            cell.OnlineView.isHidden = online[indexPath.row]
+            
             cell.UserImage.image = fu_image[indexPath.row]
             cell.StoryView.layer.borderWidth = CGFloat(border_width[indexPath.row])
             cell.FrequentUsernameLbl.text = name[indexPath.row]
             return cell
         }
     }
+    
+   
     
    
 }

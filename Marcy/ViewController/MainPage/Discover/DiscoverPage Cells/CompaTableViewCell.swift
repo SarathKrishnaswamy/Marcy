@@ -11,6 +11,7 @@ class CompaTableViewCell: UITableViewCell {
 
     @IBOutlet weak var Collectionview: UICollectionView!
     @IBOutlet weak var SeeAllBtn: UIButton!
+    @IBOutlet weak var LblHeading: UILabel!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -20,7 +21,7 @@ class CompaTableViewCell: UITableViewCell {
     
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/4.8, height: 108)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/4.8, height: UIScreen.main.bounds.height/7)
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0

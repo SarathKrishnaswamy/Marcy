@@ -12,11 +12,12 @@ class DiscoverViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
-    var story_image = [UIImage(named: "Item"),UIImage(named: "Item_2"),UIImage(named: "Item_3"),UIImage(named: "Item_4")]
+    var story_image = [UIImage(named: "Item"),UIImage(named: "Item_2"),UIImage(named: "Item_live"),UIImage(named: "Item_audio")]
     var pop_image = [UIImage(named: "groupe1"),UIImage(named: "groupe2"),UIImage(named: "groupe3"),UIImage(named: "groupe4")]
-    var Loc_images = [UIImage(named: "Loc_1"),UIImage(named: "Loc_2"),UIImage(named: "Loc_3"),UIImage(named: "Loc_4"),UIImage(named: "senegal-1")]
+    var Loc_images = [UIImage(named: "Loc_1"),UIImage(named: "Loc_2"),UIImage(named: "Loc_3"),UIImage(named: "Loc_4"),UIImage(named: "senegal_flag")]
     var frnd_bday = [UIImage(named: "userBday1"),UIImage(named: "userBday2"),UIImage(named: "userBday3"),UIImage(named: "userBday4"),UIImage(named: "userBday5")]
     var friend_request = [UIImage(named: "Add1"),UIImage(named: "Add2"),UIImage(named: "Add3"),UIImage(named: "Add4"),UIImage(named: "Add5")]
+    var pop_page_image = [UIImage(named: "NN"),UIImage(named: "Aj+francis"),UIImage(named: "LeMonde"),UIImage(named: "femme"),UIImage(named: "jenueAfrique")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -48,7 +49,16 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
     
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 12
+        return 13
+    }
+    
+    func numberOfSections(in tableView: UITableView) -> Int {
+        return 1
+    }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        let headerView = tableView.dequeueReusableCell(withIdentifier: "HeaderTableViewCell") as! HeaderTableViewCell
+        return headerView
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -74,13 +84,14 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
+            //cell.ThumbnailImage.image = UIImage(named: "post1-2")
             cell.Btn.addTarget(self, action: #selector(commentsPage(_:)), for: .touchUpInside)
             cell.Btn.tag = indexPath.row
             return cell
         }
         else if indexPath.row == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            cell.ThumbnailImage.image = UIImage(named: "Feed2")
+            cell.ThumbnailImage.image = UIImage(named: "post2-1")
             cell.Btn.isHidden = true
             return cell
         }
@@ -94,12 +105,13 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 6{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            cell.ThumbnailImage.image = UIImage(named: "Feed3")
+            cell.ThumbnailImage.image = UIImage(named: "post3-1")
             cell.Btn.isHidden = true
             return cell
         }
         else if indexPath.row == 7{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Notification_3TableViewCell", for: indexPath) as! Notification_3TableViewCell
+            cell.LblHeading.text = "Today’s friends Birthday"
             cell.CollectionView.tag = indexPath.row
             cell.CollectionView.reloadData()
             return cell
@@ -107,25 +119,35 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 8{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            cell.ThumbnailImage.image = UIImage(named: "Feed4")
+            cell.ThumbnailImage.image = UIImage(named: "post4")
             cell.Btn.isHidden = true
             return cell
         }
         else if indexPath.row == 9{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Notification_3TableViewCell", for: indexPath) as! Notification_3TableViewCell
+            cell.LblHeading.text = "Friends’suggest"
             cell.CollectionView.tag = indexPath.row
             cell.CollectionView.reloadData()
             return cell
         }
         else if indexPath.row == 10{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            cell.ThumbnailImage.image = UIImage(named: "Feed5")
+            cell.ThumbnailImage.image = UIImage(named: "post5")
             cell.Btn.isHidden = true
+            return cell
+        }
+        else if indexPath.row == 11{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "CompaTableViewCell", for: indexPath) as! CompaTableViewCell
+            //cell.SeeAllBtn.addTarget(self, action: #selector(Allgroups(_:)), for: .touchUpInside)
+            //cell.SeeAllBtn.tag = indexPath.row
+            cell.LblHeading.text = "Popular pages"
+            cell.Collectionview.tag = indexPath.row
+            cell.Collectionview.reloadData()
             return cell
         }
         else{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            cell.ThumbnailImage.image = UIImage(named: "Feed6")
+            cell.ThumbnailImage.image = UIImage(named: "post6")
             cell.Btn.isHidden = true
             return cell
         }
@@ -137,6 +159,10 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
                 parent.create_post()
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
+        return 1
     }
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
@@ -173,6 +199,9 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         else if indexPath.row == 9{
             return 208
         }
+        else if indexPath.row == 11{
+            return 174
+        }
         else{
             return UITableView.automaticDimension
         }
@@ -190,6 +219,9 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if collectionView.tag == 7{
             return frnd_bday.count
+        }
+        else if collectionView.tag == 11{
+            return pop_page_image.count
         }
         else{
             return friend_request.count
@@ -215,6 +247,11 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         else if collectionView.tag == 7{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendRequestCollectionViewCell", for: indexPath) as! FriendRequestCollectionViewCell
             cell.ThumbnailImage.image = frnd_bday[indexPath.row]
+            return cell
+        }
+        else if collectionView.tag == 11{
+            let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FriendRequestCollectionViewCell", for: indexPath) as! FriendRequestCollectionViewCell
+            cell.ThumbnailImage.image = pop_page_image[indexPath.row]
             return cell
         }
         else{

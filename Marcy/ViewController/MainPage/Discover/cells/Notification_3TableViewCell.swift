@@ -20,7 +20,7 @@ class Notification_3TableViewCell: UITableViewCell {
     
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
         layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/4.65, height: 136.95)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/4.50, height: UIScreen.main.bounds.height/5.7)
         layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .horizontal
         layout.minimumLineSpacing = 0

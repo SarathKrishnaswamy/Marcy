@@ -32,7 +32,7 @@ class SettingsViewController: UIViewController {
 
 extension SettingsViewController : UITableViewDelegate,UITableViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        return 5
+        return 8
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -42,6 +42,18 @@ extension SettingsViewController : UITableViewDelegate,UITableViewDataSource{
         }
         else if indexPath.row == 4{
             let cell = tableView.dequeueReusableCell(withIdentifier: "ProfileLogoutTableViewCell", for: indexPath) as! ProfileLogoutTableViewCell
+            return cell
+        }
+        else if indexPath.row == 5{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfPvtTableViewCell", for: indexPath) as! ProfPvtTableViewCell
+            return cell
+        }
+        else if indexPath.row == 6{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfOtherAccountsTableViewCell", for: indexPath) as! ProfOtherAccountsTableViewCell
+            return cell
+        }
+        else if indexPath.row == 7{
+            let cell = tableView.dequeueReusableCell(withIdentifier: "ProfAddmoreTableViewCell", for: indexPath) as! ProfAddmoreTableViewCell
             return cell
         }
         else{
@@ -67,6 +79,15 @@ extension SettingsViewController : UITableViewDelegate,UITableViewDataSource{
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         return 58
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        if indexPath.row == 6{
+            //other_settings_page()
+            if let parent = self.parent as? MainViewController{
+                parent.other_settings_page()
+            }
+        }
     }
     
     

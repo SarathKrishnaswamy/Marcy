@@ -21,9 +21,9 @@ class StoriesLivesViewController: UIViewController {
     func configureCollectionView(){
     
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 5, left: 2, bottom: 5, right: 2)
-        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/2.14, height: 263)
-        layout.minimumInteritemSpacing = 3
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 2)
+        layout.itemSize = CGSize(width:UIScreen.main.bounds.width/2.2, height: UIScreen.main.bounds.height/3.4)
+        layout.minimumInteritemSpacing = 5
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 5
         CollectionView.collectionViewLayout = layout
@@ -59,6 +59,11 @@ extension StoriesLivesViewController:UICollectionViewDelegate,UICollectionViewDa
         else if indexPath.row == 1{
             let vc = storyboard?.instantiateViewController(withIdentifier: "StoriesReactsViewController") as! StoriesReactsViewController
             self.navigationController?.pushViewController(vc, animated: true)
+        }
+        else if indexPath.row == 2{
+            if let parent = self.parent as? MainViewController {
+                parent.Private_user()
+            }
         }
         
     }

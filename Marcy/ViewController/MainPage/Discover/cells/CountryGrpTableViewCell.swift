@@ -10,9 +10,11 @@ import UIKit
 class CountryGrpTableViewCell: UITableViewCell {
 
     @IBOutlet weak var ThumbnailImage: UIImageView!
+    @IBOutlet weak var Videobg: UIView!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
+        self.Videobg.isHidden = true
     }
 
     override func setSelected(_ selected: Bool, animated: Bool) {

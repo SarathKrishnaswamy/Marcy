@@ -61,7 +61,7 @@ extension NotificationViewController: UITableViewDelegate,UITableViewDataSource,
     
     func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
         if indexPath.row == 3{
-            return 208
+            return 220
         }
         else{
             return UITableView.automaticDimension

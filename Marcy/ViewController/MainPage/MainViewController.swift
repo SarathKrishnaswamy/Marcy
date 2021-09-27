@@ -30,6 +30,9 @@ class MainViewController: UIViewController {
     @IBOutlet weak var StoriesContainerView: UIView!
     @IBOutlet weak var StoriesviewContainerView: UIView!
     @IBOutlet weak var UserProfileContainerview: UIView!
+    @IBOutlet weak var OtherSettingsContainerView: UIView!
+    @IBOutlet weak var PrivateuserContainerview: UIView!
+    //@IBOutlet weak var ShadowView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -41,6 +44,8 @@ class MainViewController: UIViewController {
     override func viewDidLayoutSubviews() {
         super.viewDidLayoutSubviews()
         self.Bottomview.setRadiusWithShadow(0)
+        //Bottomview.center = self.view.center
+        
     }
     
     
@@ -75,6 +80,8 @@ class MainViewController: UIViewController {
         self.StoriesContainerView.isHidden = true
         self.StoriesviewContainerView.isHidden = true
         self.UserProfileContainerview.isHidden = true
+        self.OtherSettingsContainerView.isHidden = true
+        self.PrivateuserContainerview.isHidden = true
         
     }
 
@@ -151,10 +158,24 @@ class MainViewController: UIViewController {
         self.Accountbtn.setImage(UIImage(named: "Profile_selected"), for: .normal)
         self.AccountLbl.textColor = UIColor(hexString: "#DBAC40")
     }
+    func other_settings_page(){
+        btnreset()
+        self.containerviewreset()
+        self.OtherSettingsContainerView.isHidden = false
+        self.Accountbtn.setImage(UIImage(named: "Profile_selected"), for: .normal)
+        self.AccountLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
     func country_grp(){
         btnreset()
         self.containerviewreset()
         self.CountryGrpContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    func Private_user(){
+        btnreset()
+        self.containerviewreset()
+        self.PrivateuserContainerview.isHidden = false
         self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
         self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
     }
@@ -208,4 +229,33 @@ class MainViewController: UIViewController {
         account()
     }
     
+}
+
+extension UIView {
+
+  // OUTPUT 1
+  func dropShadow(scale: Bool = true) {
+    layer.masksToBounds = false
+    layer.shadowColor = UIColor.black.cgColor
+    layer.shadowOpacity = 0.5
+    layer.shadowOffset = CGSize(width: -1, height: 1)
+    layer.shadowRadius = 1
+
+    layer.shadowPath = UIBezierPath(rect: bounds).cgPath
+    layer.shouldRasterize = true
+    layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+  }
+
+  // OUTPUT 2
+  func Full_dropShadow(color: UIColor, opacity: Float = 0.5, offSet: CGSize, radius: CGFloat = 1, scale: Bool = true) {
+    layer.masksToBounds = false
+    layer.shadowColor = color.cgColor
+    layer.shadowOpacity = opacity
+    layer.shadowOffset = offSet
+    layer.shadowRadius = radius
+
+    layer.shadowPath = UIBezierPath(rect: self.bounds).cgPath
+    layer.shouldRasterize = true
+    layer.rasterizationScale = scale ? UIScreen.main.scale : 1
+  }
 }
