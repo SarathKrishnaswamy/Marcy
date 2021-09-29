@@ -6,19 +6,39 @@
 //
 
 import UIKit
+import MXParallaxHeader
 
 class CountryGrpViewController: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
     @IBOutlet weak var BgView: UIView!
+    @IBOutlet weak var stickyHeaderView: UIView!
+    @IBOutlet weak var Collectionview: UICollectionView!
+    @IBOutlet weak var TababraView: UIView!
+    @IBOutlet weak var PostsBtn: UIButton!
+    @IBOutlet weak var PhotosBtn: UIButton!
+    @IBOutlet weak var VideosBtn: UIButton!
+    @IBOutlet weak var PostIndicator: UILabel!
+    @IBOutlet weak var PhotosIndicator: UILabel!
+    @IBOutlet weak var VideosIndicator: UILabel!
     
-    var post_item = [UIImage(named: ""),UIImage(named: "post-1"),UIImage(named: "post2-1"),UIImage(named: "Barbie")]
-    var post_1_item = [UIImage(named: ""),UIImage(named: "post-1"),UIImage(named: "post2-1"),UIImage(named: "photos")]
-    var post_2_item = [UIImage(named: ""),UIImage(named: "post-1"),UIImage(named: "post2-1"),UIImage(named: "videos")]
+    var post_item = [UIImage(named: "post-1"),UIImage(named: "post2-1"),UIImage(named: "Barbie")]
+    var post_1_item = [UIImage(named: "photos")]
+    var post_2_item = [UIImage(named: "videos")]
     var photos = [UIImage(named: "All kids"),UIImage(named: "Beach Day"), UIImage(named: "cannes"), UIImage(named: "Atl"), UIImage(named: "travel"), UIImage(named: "foods")]
     var table_id = 1
+    var numberOfCells = 50
+    var current_cat = Int()
+    var posts = 1
+    var photos_cat = 2
+    var videos = 3
     override func viewDidLoad() {
         super.viewDidLoad()
+        setupTableView()
+        reset()
+        self.PostsBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
+        self.PostIndicator.isHidden = false
+        self.current_cat = 1
 
         // Do any additional setup after loading the view.
     }
@@ -32,176 +52,115 @@ class CountryGrpViewController: UIViewController {
         BgView.layer.maskedCorners = [.layerMaxXMinYCorner, .layerMinXMinYCorner] // Top right corner, Top left corner respectively
     }
     
+    //MARK: View Setup
+    
+    func reset(){
+        self.PostIndicator.isHidden = true
+        self.PhotosIndicator.isHidden = true
+        self.VideosIndicator.isHidden = true
+        self.PostsBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
+        self.PhotosBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
+        self.VideosBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
+    }
+    
+    
+    func setupTableView() {
+        
+        TableView.register(UINib(nibName: "TabItemTableViewCell", bundle: nil),
+                           forCellReuseIdentifier: "TabItemTableViewCell")
+        TableView.dataSource = self
+        TableView.delegate = self
+        TableView.estimatedRowHeight = 44
+        
+        TableView.contentInset = UIEdgeInsets(top: stickyHeaderView.bounds.height + TababraView.bounds.height,
+                                              left: 0,
+                                              bottom: 0,
+                                              right: 0)
+    }
+    
+    
 
     @IBAction func BackBtnOnPressed(_ sender: Any) {
         if let parent = self.parent as? MainViewController{
             parent.countries_page()
         }
     }
+    
+    
+    @IBAction func PostsBtnOnPressed(_ sender: Any) {
+        reset()
+        self.PostsBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
+        self.PostIndicator.isHidden = false
+        self.current_cat = 1
+        self.TableView.reloadData()
+    }
+    
+    
+    
+    @IBAction func PhotosBtnOnPressed(_ sender: Any) {
+        reset()
+        self.PhotosBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
+        self.PhotosIndicator.isHidden = false
+        self.current_cat = 2
+        self.TableView.reloadData()
+    }
+    
+    
+    
+    @IBAction func VideosBtnOnPressed(_ sender: Any) {
+        reset()
+        self.VideosBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
+        self.VideosIndicator.isHidden = false
+        self.current_cat = 3
+        self.TableView.reloadData()
+    }
+    
+    
 }
 extension CountryGrpViewController:UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate, UICollectionViewDataSource{
-    
-    
-    
-    
-    func numberOfSections(in tableView: UITableView) -> Int {
-        2
-    }
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if section == 0 {
-            return 1
+        if current_cat == posts{
+            return post_item.count
+        }
+        else if current_cat == photos_cat{
+            return post_1_item.count
         }
         else{
-            if table_id == 1{
-                return post_item.count
-            }
-            else if table_id == 2{
-                return self.post_item.count
-            }
-            else{
-                return post_item.count
-            }
+            return post_2_item.count
         }
     }
     
-    
-    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        let headercell = tableView.dequeueReusableCell(withIdentifier: "CountryHeaderTableViewCell") as! CountryHeaderTableViewCell
-        
-        headercell.PostBtnTapAction = { post in
-            headercell.SelectIndicator.isHidden = false
-            headercell.Selectindicator_1.isHidden = true
-            headercell.SelectIndicator_2.isHidden = true
-            headercell.Postbtn.tintColor = UIColor.init(hexString: "DBAC40")
-            headercell.Photosbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            headercell.Videosbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            self.table_id = 1
-            let indexes = (0..<self.post_item.count).map { IndexPath(row: $0, section: 1) }
-            self.TableView.reloadRows(at: indexes, with: .bottom)
-            
-        }
-        
-        headercell.PhotoBtnTapAction = { photo in
-            headercell.SelectIndicator.isHidden = true
-            headercell.Selectindicator_1.isHidden = false
-            headercell.SelectIndicator_2.isHidden = true
-            headercell.Postbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            headercell.Photosbtn.tintColor = UIColor.init(hexString: "DBAC40")
-            headercell.Videosbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            self.table_id = 2
-            let indexes = (0..<self.post_item.count).map { IndexPath(row: $0, section: 1) }
-            self.TableView.reloadRows(at: indexes, with: .left)
-            
-            
-        }
-        
-        headercell.VideosBtnTapAction = { video in
-            headercell.SelectIndicator.isHidden = true
-            headercell.Selectindicator_1.isHidden = true
-            headercell.SelectIndicator_2.isHidden = false
-            headercell.Postbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            headercell.Photosbtn.tintColor = UIColor.init(hexString: "8A8A8F")
-            headercell.Videosbtn.tintColor = UIColor.init(hexString: "DBAC40")
-            self.table_id = 3
-            let indexes = (0..<self.post_item.count).map { IndexPath(row: $0, section: 1) }
-            self.TableView.reloadRows(at: indexes, with: .left)
-            
-        }
-        
-        
-       
-        return headercell
-        
-    }
-    
+
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if indexPath.section == 0{
-            if indexPath.row == 0{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CountryFollowTableViewCell", for: indexPath) as! CountryFollowTableViewCell
-                cell.Collectionview.tag = indexPath.row
-                cell.Collectionview.delegate = self
-                cell.Collectionview.dataSource = self
-                cell.Collectionview.reloadData()
+        if current_cat == posts{
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TabItemTableViewCell") as? TabItemTableViewCell {
+                cell.ThumbImage.image = post_item[indexPath.row]
                 return cell
             }
-            else{
-                
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CountryFollowTableViewCell", for: indexPath) as! CountryFollowTableViewCell
-                cell.Collectionview.tag = indexPath.row
-                cell.Collectionview.delegate = self
-                cell.Collectionview.dataSource = self
-                cell.Collectionview.reloadData()
+            
+            return UITableViewCell()
+        }
+        else if current_cat == photos_cat{
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TabItemTableViewCell") as? TabItemTableViewCell {
+                cell.ThumbImage.image = post_1_item[indexPath.row]
                 return cell
-                
             }
+            
+            return UITableViewCell()
         }
         else{
-            if table_id == 1{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CountryGrpTableViewCell", for: indexPath) as! CountryGrpTableViewCell
-                cell.ThumbnailImage.image = post_item[indexPath.row]
-                return cell
-            }
-            else if table_id == 2{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CountryGrpTableViewCell", for: indexPath) as! CountryGrpTableViewCell
-                cell.ThumbnailImage.image = post_1_item[indexPath.row]
-                return cell
-            }
-            else{
-                let cell = tableView.dequeueReusableCell(withIdentifier: "CountryGrpTableViewCell", for: indexPath) as! CountryGrpTableViewCell
-                cell.ThumbnailImage.image = post_2_item[indexPath.row]
+            if let cell = tableView.dequeueReusableCell(withIdentifier: "TabItemTableViewCell") as? TabItemTableViewCell {
+                cell.ThumbImage.image = post_2_item[indexPath.row]
                 return cell
             }
             
+            return UITableViewCell()
             
-        }
-        
-    }
-    
-    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
-        if indexPath.section == 1{
-            if table_id == 1{
-                if indexPath.row == 0{
-                    return 0
-                }
-                else{
-                    return UITableView.automaticDimension
-                }
-            }
-            else{
-                if indexPath.row == 0{
-                    return 0
-                }
-                else if indexPath.row == 1{
-                    return 0
-                }
-                else if indexPath.row == 2{
-                    return 0
-                }
-                else{
-                    return UITableView.automaticDimension
-                }
-            }
-            
-        }
-        else{
-            
-            return 279
         }
     }
     
-    func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        if section == 0{
-            return 0
-        }
-        else{
-            return 44
-        }
-    }
-    
-    
+   
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return photos.count
@@ -212,6 +171,51 @@ extension CountryGrpViewController:UITableViewDelegate,UITableViewDataSource,UIC
         cell.ThumbnailImage.image = photos[indexPath.row]
         return cell
     }
+    
+    
+    static let offset_HeaderStop: CGFloat = 500 - 64  // At this offset the Header stops its transformations (Header height - Approx Nav Bar Height)
+    
+    func scrollViewDidScroll(_ scrollView: UIScrollView) {
+        
+        if scrollView == TableView{
+            let totalOffset = scrollView.contentOffset.y + stickyHeaderView.bounds.height + TababraView.bounds.height
+            
+            var headerTransform = CATransform3DIdentity // Both Scale and Translate.
+            var segmentTransform = CATransform3DIdentity // Translate only.
+            
+            if totalOffset < 0 {
+                
+                /*
+                 * Table is pulled down below the header.
+                 * Animation to transform.
+                 */
+                
+                let headerScaleFactor:CGFloat = -(totalOffset) / stickyHeaderView.bounds.height
+                let headerSizevariation = ((stickyHeaderView.bounds.height * (1.0 + headerScaleFactor)) - stickyHeaderView.bounds.height)/2
+                headerTransform = CATransform3DTranslate(headerTransform, 0, headerSizevariation, 0)
+                headerTransform = CATransform3DScale(headerTransform, 1.0 + headerScaleFactor, 1.0 + headerScaleFactor, 0)
+                
+            } else {
+                
+                /*
+                 * Table scrolled up or down.
+                 */
+                
+                headerTransform = CATransform3DTranslate(headerTransform, 0, max(-CountryGrpViewController.offset_HeaderStop, -totalOffset), 0)
+            }
+            
+            stickyHeaderView.layer.transform = headerTransform
+            
+            /*
+             *  Scroll the segment view until its offset reaches the same offset at which the header stopped shrinking.
+             */
+            
+            let segmentViewOffset = -totalOffset
+            segmentTransform = CATransform3DTranslate(segmentTransform, 0, max(segmentViewOffset, -CountryGrpViewController.offset_HeaderStop), 0)
+            TababraView.layer.transform = segmentTransform
+        }
+    }
+    
     
 }
 

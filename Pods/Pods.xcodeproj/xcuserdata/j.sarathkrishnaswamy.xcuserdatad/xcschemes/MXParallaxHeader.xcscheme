@@ -14,9 +14,9 @@
             buildForAnalyzing = "YES">
             <BuildableReference
                BuildableIdentifier = "primary"
-               BlueprintIdentifier = "B490E7485944099E16C9CBD79119D1D4"
-               BuildableName = "IQKeyboardManagerSwift.framework"
-               BlueprintName = "IQKeyboardManagerSwift"
+               BlueprintIdentifier = "F65C0EE8AF6DB74ABBACA4A3A11CE230"
+               BuildableName = "MXParallaxHeader.framework"
+               BlueprintName = "MXParallaxHeader"
                ReferencedContainer = "container:Pods.xcodeproj">
             </BuildableReference>
          </BuildActionEntry>

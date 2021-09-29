@@ -7,5 +7,6 @@ target 'Marcy' do
 
   # Pods for Marcy
    pod 'IQKeyboardManagerSwift'
+   pod "MXParallaxHeader"
 
 end

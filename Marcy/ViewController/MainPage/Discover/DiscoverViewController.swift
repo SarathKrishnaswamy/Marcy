@@ -84,7 +84,7 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 3{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Feed_1TableViewCell", for: indexPath) as! Feed_1TableViewCell
-            //cell.ThumbnailImage.image = UIImage(named: "post1-2")
+            cell.ThumbnailImage.image = UIImage(named: "post1-2")
             cell.Btn.addTarget(self, action: #selector(commentsPage(_:)), for: .touchUpInside)
             cell.Btn.tag = indexPath.row
             return cell
@@ -176,7 +176,7 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
             return 165
         }
         else if indexPath.row == 3{
-            return 542
+            return 610
         }
         else if indexPath.row == 4{
             return UITableView.automaticDimension
