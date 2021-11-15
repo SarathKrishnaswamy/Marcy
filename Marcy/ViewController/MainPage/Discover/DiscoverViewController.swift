@@ -12,7 +12,7 @@ class DiscoverViewController: UIViewController {
     
     @IBOutlet weak var TableView: UITableView!
     
-    var story_image = [UIImage(named: "Item"),UIImage(named: "Item_2"),UIImage(named: "Item_live"),UIImage(named: "Item_audio")]
+    var story_image = [UIImage(named: "Item"),UIImage(named: "Item_2"),UIImage(named: "Item_3"),UIImage(named: "Item_4")]
     var pop_image = [UIImage(named: "groupe1"),UIImage(named: "groupe2"),UIImage(named: "groupe3"),UIImage(named: "groupe4")]
     var Loc_images = [UIImage(named: "Loc_1"),UIImage(named: "Loc_2"),UIImage(named: "Loc_3"),UIImage(named: "Loc_4"),UIImage(named: "senegal_flag")]
     var frnd_bday = [UIImage(named: "userBday1"),UIImage(named: "userBday2"),UIImage(named: "userBday3"),UIImage(named: "userBday4"),UIImage(named: "userBday5")]
@@ -31,7 +31,7 @@ class DiscoverViewController: UIViewController {
 
     @IBAction func SearchBtnOnPressed(_ sender: Any) {
         if let parent = self.parent as? MainViewController {
-            parent.search_page()
+            parent.first_search_page()
         }
     }
     
@@ -87,6 +87,7 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
             cell.ThumbnailImage.image = UIImage(named: "post1-2")
             cell.Btn.addTarget(self, action: #selector(commentsPage(_:)), for: .touchUpInside)
             cell.Btn.tag = indexPath.row
+            cell.Btn.isHidden = false
             return cell
         }
         else if indexPath.row == 4{
@@ -138,8 +139,8 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
         }
         else if indexPath.row == 11{
             let cell = tableView.dequeueReusableCell(withIdentifier: "CompaTableViewCell", for: indexPath) as! CompaTableViewCell
-            //cell.SeeAllBtn.addTarget(self, action: #selector(Allgroups(_:)), for: .touchUpInside)
-            //cell.SeeAllBtn.tag = indexPath.row
+            cell.SeeAllBtn.addTarget(self, action: #selector(AllPages(_:)), for: .touchUpInside)
+            cell.SeeAllBtn.tag = indexPath.row
             cell.LblHeading.text = "Popular pages"
             cell.Collectionview.tag = indexPath.row
             cell.Collectionview.reloadData()
@@ -278,6 +279,12 @@ extension DiscoverViewController:UITableViewDelegate,UITableViewDataSource,UICol
     @objc func Allgroups(_ sender:UIButton){
         if let parent = self.parent as? MainViewController{
             parent.groups_page()
+        }
+    }
+    
+    @objc func AllPages(_ sender:UIButton){
+        if let parent = self.parent as? MainViewController{
+            parent.All_pages()
         }
     }
     

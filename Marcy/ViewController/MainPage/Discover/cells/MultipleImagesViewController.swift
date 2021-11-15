@@ -34,6 +34,7 @@ extension MultipleImagesViewController:UITableViewDelegate,UITableViewDataSource
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.row == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "Notification_1TableViewCell", for: indexPath) as! Notification_1TableViewCell
+            cell.MessageSendBtn.addTarget(self, action: #selector(send_message), for: .touchUpInside)
             return cell
         }
         else{
@@ -41,6 +42,12 @@ extension MultipleImagesViewController:UITableViewDelegate,UITableViewDataSource
             cell.ThumbnailImage.image = comment_image[indexPath.row]
             return cell
         }
+    }
+    
+    @objc func send_message(){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "ShareViewController") as! ShareViewController
+        vc.modalPresentationStyle = .overFullScreen
+        self.present(vc, animated: true, completion: nil)
     }
     
     

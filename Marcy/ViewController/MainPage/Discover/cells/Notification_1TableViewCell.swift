@@ -10,6 +10,7 @@ import UIKit
 class Notification_1TableViewCell: UITableViewCell {
 
     @IBOutlet weak var Thumbnailimage: UIImageView!
+    @IBOutlet weak var MessageSendBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code
@@ -21,4 +22,5 @@ class Notification_1TableViewCell: UITableViewCell {
         // Configure the view for the selected state
     }
 
+    
 }

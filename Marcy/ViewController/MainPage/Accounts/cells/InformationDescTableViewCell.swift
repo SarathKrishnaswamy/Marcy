@@ -9,6 +9,7 @@ import UIKit
 
 class InformationDescTableViewCell: UITableViewCell {
 
+    @IBOutlet weak var EditBtn: UIButton!
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

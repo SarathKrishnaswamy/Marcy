@@ -38,6 +38,14 @@ class AllGroupsViewController: UIViewController {
         }
     }
     
+    
+    @IBAction func SearchBtnOnPressed(_ sender: Any) {
+        let vc = storyboard?.instantiateViewController(withIdentifier: "GroupPageSearchViewController") as! GroupPageSearchViewController
+        vc.id = 1
+        vc.modalPresentationStyle = .overCurrentContext
+        self.present(vc, animated: true, completion: nil)
+    }
+    
 
 }
 

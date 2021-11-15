@@ -13,7 +13,7 @@ class StoriesLivesViewController: UIViewController {
     var story_image = [UIImage(named: "Story_1"),UIImage(named: "Story_2"),UIImage(named: "Story_3"),UIImage(named: "Story_4"),UIImage(named: "Story_5"),UIImage(named: "Story_6")]
     override func viewDidLoad() {
         super.viewDidLoad()
-        configureCollectionView()
+        //configureCollectionView()
 
         // Do any additional setup after loading the view.
     }
@@ -21,9 +21,9 @@ class StoriesLivesViewController: UIViewController {
     func configureCollectionView(){
     
         let layout: UICollectionViewFlowLayout = UICollectionViewFlowLayout()
-        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 2)
+        layout.sectionInset = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
         layout.itemSize = CGSize(width:UIScreen.main.bounds.width/2.2, height: UIScreen.main.bounds.height/3.4)
-        layout.minimumInteritemSpacing = 5
+        layout.minimumInteritemSpacing = 0
         layout.scrollDirection = .vertical
         layout.minimumLineSpacing = 5
         CollectionView.collectionViewLayout = layout
@@ -64,6 +64,10 @@ extension StoriesLivesViewController:UICollectionViewDelegate,UICollectionViewDa
             if let parent = self.parent as? MainViewController {
                 parent.Private_user()
             }
+        }
+        else if indexPath.row == 3{
+            let vc = storyboard?.instantiateViewController(withIdentifier: "SignalBadStoriesViewController") as! SignalBadStoriesViewController
+            self.navigationController?.pushViewController(vc, animated: true)
         }
         
     }

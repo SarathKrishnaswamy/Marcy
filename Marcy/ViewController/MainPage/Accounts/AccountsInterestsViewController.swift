@@ -51,6 +51,7 @@ extension AccountsInterestsViewController: UITableViewDelegate,UITableViewDataSo
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "InformationDescTableViewCell", for: indexPath) as! InformationDescTableViewCell
+            cell.EditBtn.addTarget(self, action: #selector(editBtnPressed(_:)), for: .touchUpInside)
             return cell
         }
         else if indexPath.section == 1{
@@ -112,6 +113,12 @@ extension AccountsInterestsViewController: UITableViewDelegate,UITableViewDataSo
     
     @objc func editPressed(_ sender:UIButton){
         let vc = storyboard?.instantiateViewController(withIdentifier: "InterestsViewController") as! InterestsViewController
+        self.navigationController?.pushViewController(vc, animated: true)
+        
+    }
+    
+    @objc func editBtnPressed(_ sender:UIButton){
+        let vc = storyboard?.instantiateViewController(withIdentifier: "MaBioViewController") as! MaBioViewController
         self.navigationController?.pushViewController(vc, animated: true)
         
     }

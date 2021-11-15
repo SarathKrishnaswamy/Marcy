@@ -11,9 +11,9 @@ class MessagesViewController: UIViewController {
 
     @IBOutlet weak var TableView: UITableView!
     
-    var fu_image = [UIImage(named: "fuser_1"),UIImage(named: "fuser_2"),UIImage(named: "fuser_3"),UIImage(named: "fuser_4"),UIImage(named: "fuser_5"),UIImage(named: "fuser_6")]
+    var fu_image = [UIImage(named: "fuser_1"),UIImage(named: "fuser_2"),UIImage(named: "Fernando"),UIImage(named: "fuser_4"),UIImage(named: "richard"),UIImage(named: "fuser_6")]
     var border_width = [0.0,0,0.0,0.0,0,0]
-    var online = [false,true,false,false,true,true]
+    var online = [false,true,true,false,true,true]
     var name = ["Gerard","Amber","Fernando","Jane","Richard","Richard"]
     
     var user_name = ["Gunther","Gunther","Burgundy","Hugh","Ingrid","Pamela","Girth"]

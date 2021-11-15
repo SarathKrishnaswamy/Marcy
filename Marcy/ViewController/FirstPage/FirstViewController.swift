@@ -13,10 +13,11 @@ class FirstViewController: UIViewController {
     @IBOutlet weak var SignUpbtn: UIButton!
     @IBOutlet weak var LoginBtn: UIButton!
     @IBOutlet weak var GradientHeightconstraint: NSLayoutConstraint!
+    @IBOutlet weak var Collectionview: UICollectionView!
     
     
     var timer = Timer()
-    
+    var user_image = [UIImage(named: "Profuser_1"),UIImage(named: "Profuser_2"),UIImage(named: "Profuser_3"),UIImage(named: "Profuser_4"),UIImage(named: "Profuser_5")]
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -62,6 +63,20 @@ class FirstViewController: UIViewController {
     
     
     @IBAction func LoginBtnOnPressed(_ sender: Any) {
+    }
+    
+    
+}
+
+extension FirstViewController : UICollectionViewDelegate,UICollectionViewDataSource{
+    func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
+        return user_image.count
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
+        let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "UserCollectionViewCell", for: indexPath) as! UserCollectionViewCell
+        cell.UserImage.image = user_image[indexPath.row]
+        return cell
     }
     
     

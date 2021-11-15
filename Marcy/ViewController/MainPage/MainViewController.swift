@@ -32,11 +32,14 @@ class MainViewController: UIViewController {
     @IBOutlet weak var UserProfileContainerview: UIView!
     @IBOutlet weak var OtherSettingsContainerView: UIView!
     @IBOutlet weak var PrivateuserContainerview: UIView!
+    @IBOutlet weak var AllPagesContainerView: UIView!
+    @IBOutlet var FirstSearchContainerView: UIView!
     //@IBOutlet weak var ShadowView: UIView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         initialsetup()
+        addLongPressGesture()
 
         // Do any additional setup after loading the view.
     }
@@ -65,6 +68,21 @@ class MainViewController: UIViewController {
         self.AccountLbl.textColor = UIColor(hexString: "#000000")
     }
     
+    func addLongPressGesture(){
+        let longPress = UILongPressGestureRecognizer(target: self, action: #selector(longPress(_:)))
+        longPress.minimumPressDuration = 0.2
+        self.Accountbtn.addGestureRecognizer(longPress)
+    }
+    @objc func longPress(_ gesture: UILongPressGestureRecognizer) {
+        if gesture.state == UIGestureRecognizer.State.began {
+            let impactHeavy = UIImpactFeedbackGenerator(style: .heavy)
+            impactHeavy.impactOccurred()
+            let vc = storyboard?.instantiateViewController(withIdentifier: "OtherAccountsViewController") as! OtherAccountsViewController
+            vc.modalPresentationStyle = .popover
+            self.present(vc, animated: true, completion: nil)
+            print("Long Press")
+        }
+    }
     func containerviewreset(){
         self.ContainerView.isHidden = true
         self.ContainerView_1.isHidden = true
@@ -82,6 +100,8 @@ class MainViewController: UIViewController {
         self.UserProfileContainerview.isHidden = true
         self.OtherSettingsContainerView.isHidden = true
         self.PrivateuserContainerview.isHidden = true
+        self.AllPagesContainerView.isHidden = true
+        self.FirstSearchContainerView.isHidden = true
         
     }
 
@@ -118,6 +138,13 @@ class MainViewController: UIViewController {
         self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
         self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
     }
+    func first_search_page(){
+        btnreset()
+        self.containerviewreset()
+        self.FirstSearchContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
     
     func Notif_page(){
         btnreset()
@@ -146,6 +173,14 @@ class MainViewController: UIViewController {
         btnreset()
         self.containerviewreset()
         self.AllCommunitiesContainerView.isHidden = false
+        self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
+        self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
+    }
+    
+    func All_pages(){
+        btnreset()
+        self.containerviewreset()
+        self.AllPagesContainerView.isHidden = false
         self.HomeBtn.setImage(UIImage(named: "home_selected"), for: .normal)
         self.HomeLbl.textColor = UIColor(hexString: "#DBAC40")
     }
@@ -225,9 +260,10 @@ class MainViewController: UIViewController {
     }
     
     
-    @IBAction func AccountBtnOnPressed(_ sender: Any) {
+    @IBAction func AccountOnPressed(_ sender: UIButton) {
         account()
     }
+    
     
 }
 

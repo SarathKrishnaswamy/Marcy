@@ -51,6 +51,7 @@ extension UserProfileInformationViewController: UITableViewDelegate,UITableViewD
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         if indexPath.section == 0{
             let cell = tableView.dequeueReusableCell(withIdentifier: "InformationDescTableViewCell", for: indexPath) as! InformationDescTableViewCell
+           
             return cell
         }
         else if indexPath.section == 1{
@@ -108,6 +109,10 @@ extension UserProfileInformationViewController: UITableViewDelegate,UITableViewD
             cell.LblGroup.text = friend_name[indexPath.row]
             return cell
         }
+    }
+    
+    @objc func editbtnoNPressed(_ sender:UIButton){
+        
     }
     
 }
