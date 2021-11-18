@@ -4425,22 +4425,69 @@ looking at its layout. The point of using Lorem </string>
                                                     <action selector="CancelBtnOnPressed:" destination="oH6-Be-IhY" eventType="touchUpInside" id="c4E-jL-fJW"/>
                                                 </connections>
                                             </button>
-                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="image_grp" translatesAutoresizingMaskIntoConstraints="NO" id="bqR-wZ-NhU">
-                                                <rect key="frame" x="2.5" y="48" width="354" height="332"/>
-                                            </imageView>
+                                            <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="PMz-4r-R3e">
+                                                <rect key="frame" x="8" y="48" width="343" height="341"/>
+                                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                <collectionViewFlowLayout key="collectionViewLayout" automaticEstimatedItemSize="YES" minimumLineSpacing="10" minimumInteritemSpacing="10" id="eTm-L7-dPP">
+                                                    <size key="itemSize" width="106" height="116"/>
+                                                    <size key="headerReferenceSize" width="0.0" height="0.0"/>
+                                                    <size key="footerReferenceSize" width="0.0" height="0.0"/>
+                                                    <inset key="sectionInset" minX="0.0" minY="0.0" maxX="0.0" maxY="0.0"/>
+                                                </collectionViewFlowLayout>
+                                                <cells>
+                                                    <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ShareCollectionViewCell" id="HyP-hm-AO2" customClass="ShareCollectionViewCell" customModule="Marcy" customModuleProvider="target">
+                                                        <rect key="frame" x="0.0" y="0.0" width="106" height="116"/>
+                                                        <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                        <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="1G3-4R-9KL">
+                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="116"/>
+                                                            <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                            <subviews>
+                                                                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="bzS-M6-sBq">
+                                                                    <rect key="frame" x="0.0" y="0.0" width="106" height="116"/>
+                                                                    <subviews>
+                                                                        <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="se_1" translatesAutoresizingMaskIntoConstraints="NO" id="28M-z4-GBO">
+                                                                            <rect key="frame" x="0.0" y="0.0" width="106" height="116"/>
+                                                                        </imageView>
+                                                                    </subviews>
+                                                                    <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                                                    <constraints>
+                                                                        <constraint firstAttribute="bottom" secondItem="28M-z4-GBO" secondAttribute="bottom" id="9J4-0R-kuB"/>
+                                                                        <constraint firstItem="28M-z4-GBO" firstAttribute="leading" secondItem="bzS-M6-sBq" secondAttribute="leading" id="Tv5-gc-dt8"/>
+                                                                        <constraint firstAttribute="trailing" secondItem="28M-z4-GBO" secondAttribute="trailing" id="khO-dz-Wh4"/>
+                                                                        <constraint firstItem="28M-z4-GBO" firstAttribute="top" secondItem="bzS-M6-sBq" secondAttribute="top" id="uYK-sr-1j5"/>
+                                                                    </constraints>
+                                                                </view>
+                                                            </subviews>
+                                                            <constraints>
+                                                                <constraint firstItem="bzS-M6-sBq" firstAttribute="leading" secondItem="1G3-4R-9KL" secondAttribute="leading" id="9nu-8g-MNC"/>
+                                                                <constraint firstAttribute="bottom" secondItem="bzS-M6-sBq" secondAttribute="bottom" id="RBt-ne-l3x"/>
+                                                                <constraint firstAttribute="trailing" secondItem="bzS-M6-sBq" secondAttribute="trailing" id="be9-PH-5t5"/>
+                                                                <constraint firstItem="bzS-M6-sBq" firstAttribute="top" secondItem="1G3-4R-9KL" secondAttribute="top" id="lem-nt-1za"/>
+                                                            </constraints>
+                                                        </collectionViewCellContentView>
+                                                        <connections>
+                                                            <outlet property="ImageThumb" destination="28M-z4-GBO" id="r0d-RQ-yzw"/>
+                                                        </connections>
+                                                    </collectionViewCell>
+                                                </cells>
+                                                <connections>
+                                                    <outlet property="dataSource" destination="oH6-Be-IhY" id="luV-Fg-C6d"/>
+                                                    <outlet property="delegate" destination="oH6-Be-IhY" id="bKO-d7-rM1"/>
+                                                </connections>
+                                            </collectionView>
                                         </subviews>
                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                         <constraints>
                                             <constraint firstItem="FZP-a0-qOV" firstAttribute="leading" secondItem="CHb-Kl-wcG" secondAttribute="trailing" constant="12" id="1Gu-0c-1dh"/>
+                                            <constraint firstAttribute="bottom" secondItem="PMz-4r-R3e" secondAttribute="bottom" constant="5" id="3Cc-AZ-xg6"/>
+                                            <constraint firstItem="PMz-4r-R3e" firstAttribute="leading" secondItem="7Ce-sp-GbK" secondAttribute="leading" constant="8" id="7ac-9y-t6q"/>
                                             <constraint firstAttribute="height" constant="394" id="CHG-qA-EqJ"/>
-                                            <constraint firstItem="bqR-wZ-NhU" firstAttribute="leading" secondItem="7Ce-sp-GbK" secondAttribute="leading" constant="2.5" id="K9I-uC-Gvk"/>
                                             <constraint firstItem="CHb-Kl-wcG" firstAttribute="leading" secondItem="7Ce-sp-GbK" secondAttribute="leading" id="Kvc-H3-lCz"/>
                                             <constraint firstItem="CHb-Kl-wcG" firstAttribute="top" secondItem="7Ce-sp-GbK" secondAttribute="top" id="Utn-uI-fHJ"/>
-                                            <constraint firstAttribute="trailing" secondItem="bqR-wZ-NhU" secondAttribute="trailing" constant="2.5" id="bCD-I7-CMM"/>
-                                            <constraint firstAttribute="bottom" secondItem="bqR-wZ-NhU" secondAttribute="bottom" constant="14" id="bdX-Hn-nAM"/>
-                                            <constraint firstItem="bqR-wZ-NhU" firstAttribute="top" secondItem="FZP-a0-qOV" secondAttribute="bottom" constant="5" id="eqU-QV-5nk"/>
+                                            <constraint firstItem="PMz-4r-R3e" firstAttribute="top" secondItem="FZP-a0-qOV" secondAttribute="bottom" constant="5" id="fa8-df-w6d"/>
                                             <constraint firstAttribute="trailing" secondItem="FZP-a0-qOV" secondAttribute="trailing" constant="10" id="nhQ-Jo-cZf"/>
                                             <constraint firstItem="FZP-a0-qOV" firstAttribute="top" secondItem="7Ce-sp-GbK" secondAttribute="top" constant="9" id="yWc-la-pOa"/>
+                                            <constraint firstAttribute="trailing" secondItem="PMz-4r-R3e" secondAttribute="trailing" constant="8" id="z8b-R1-Gpu"/>
                                         </constraints>
                                     </view>
                                 </subviews>
@@ -4465,6 +4512,8 @@ looking at its layout. The point of using Lorem </string>
                         </constraints>
                     </view>
                     <connections>
+                        <outlet property="CollectionView" destination="PMz-4r-R3e" id="y0V-Ra-BSV"/>
+                        <outlet property="SearchBar" destination="CHb-Kl-wcG" id="Oko-0A-OKe"/>
                         <outlet property="SearchView" destination="7Ce-sp-GbK" id="PdK-kG-ekY"/>
                         <outlet property="SendBtn" destination="SIj-vB-ady" id="Li4-jQ-8M4"/>
                     </connections>
@@ -4653,13 +4702,10 @@ looking at its layout. The point of using Lorem </string>
                                                 </connections>
                                             </tableView>
                                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="zmE-Ve-6RW">
-                                                <rect key="frame" x="0.0" y="0.0" width="414" height="643"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="414" height="604"/>
                                                 <subviews>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sengal_follow_row" translatesAutoresizingMaskIntoConstraints="NO" id="HXB-Zc-5cQ">
-                                                        <rect key="frame" x="12" y="358" width="389" height="156"/>
-                                                    </imageView>
                                                     <collectionView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" dataMode="prototypes" translatesAutoresizingMaskIntoConstraints="NO" id="AEd-qc-yFQ">
-                                                        <rect key="frame" x="10" y="524" width="399.5" height="113"/>
+                                                        <rect key="frame" x="10" y="447" width="399.5" height="108"/>
                                                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                         <collectionViewFlowLayout key="collectionViewLayout" scrollDirection="horizontal" minimumLineSpacing="2" minimumInteritemSpacing="2" id="4OW-O6-CfB">
                                                             <size key="itemSize" width="71" height="108"/>
@@ -4670,7 +4716,7 @@ looking at its layout. The point of using Lorem </string>
                                                         </collectionViewFlowLayout>
                                                         <cells>
                                                             <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="PhotoCountryCollectionViewCell" id="lTU-ek-pD8" customClass="PhotoCountryCollectionViewCell" customModule="Marcy" customModuleProvider="target">
-                                                                <rect key="frame" x="0.0" y="2" width="75" height="109"/>
+                                                                <rect key="frame" x="0.0" y="-0.5" width="75" height="109"/>
                                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                                 <collectionViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" id="BwI-xP-fX0">
                                                                     <rect key="frame" x="0.0" y="0.0" width="75" height="109"/>
@@ -4709,41 +4755,57 @@ looking at its layout. The point of using Lorem </string>
                                                             <outlet property="delegate" destination="USa-dY-apv" id="dMV-Cw-xJB"/>
                                                         </connections>
                                                     </collectionView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="Top_image" translatesAutoresizingMaskIntoConstraints="NO" id="jeB-eJ-QqI">
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="giraffe_bg" translatesAutoresizingMaskIntoConstraints="NO" id="jeB-eJ-QqI">
                                                         <rect key="frame" x="0.0" y="0.0" width="414" height="257"/>
                                                     </imageView>
                                                     <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="flag" translatesAutoresizingMaskIntoConstraints="NO" id="iM8-kq-bLV">
                                                         <rect key="frame" x="310" y="196" width="99" height="107.5"/>
                                                     </imageView>
-                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="sengal" translatesAutoresizingMaskIntoConstraints="NO" id="hvT-jw-5au">
-                                                        <rect key="frame" x="25" y="267" width="364" height="80"/>
+                                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" image="Sengal_lights" translatesAutoresizingMaskIntoConstraints="NO" id="5kF-2v-IhU">
+                                                        <rect key="frame" x="1" y="265" width="413" height="136"/>
                                                     </imageView>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="orem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the  ☺️☺️☺️" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="6l1-41-dGT">
+                                                        <rect key="frame" x="8" y="404" width="398" height="28"/>
+                                                        <fontDescription key="fontDescription" name="Helvetica" family="Helvetica" pointSize="12"/>
+                                                        <color key="textColor" red="0.40000000000000002" green="0.40000000000000002" blue="0.40000000000000002" alpha="1" colorSpace="calibratedRGB"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vEj-pt-h6A">
+                                                        <rect key="frame" x="0.0" y="438" width="414" height="1"/>
+                                                        <color key="backgroundColor" red="0.96607202290000005" green="0.96607202290000005" blue="0.96607202290000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                                        <constraints>
+                                                            <constraint firstAttribute="height" constant="1" id="Wdq-pz-e0H"/>
+                                                        </constraints>
+                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <nil key="textColor"/>
+                                                        <nil key="highlightedColor"/>
+                                                    </label>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="hvT-jw-5au" firstAttribute="top" secondItem="jeB-eJ-QqI" secondAttribute="bottom" constant="10" id="2RR-XR-NlJ"/>
-                                                    <constraint firstItem="HXB-Zc-5cQ" firstAttribute="top" secondItem="hvT-jw-5au" secondAttribute="bottom" constant="11" id="7PI-on-f0D"/>
+                                                    <constraint firstItem="5kF-2v-IhU" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="1" id="8Aa-BU-omo"/>
+                                                    <constraint firstItem="vEj-pt-h6A" firstAttribute="top" secondItem="6l1-41-dGT" secondAttribute="bottom" constant="6" id="AzY-E8-buy"/>
+                                                    <constraint firstAttribute="trailing" secondItem="6l1-41-dGT" secondAttribute="trailing" constant="8" id="DIS-cl-Rci"/>
                                                     <constraint firstItem="jeB-eJ-QqI" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" id="E0N-k3-zBQ"/>
-                                                    <constraint firstItem="HXB-Zc-5cQ" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="12" id="IpL-Yc-Mn4"/>
-                                                    <constraint firstAttribute="trailing" secondItem="AEd-qc-yFQ" secondAttribute="trailing" constant="4.5" id="LWX-R9-gmt"/>
                                                     <constraint firstItem="iM8-kq-bLV" firstAttribute="top" secondItem="jeB-eJ-QqI" secondAttribute="bottom" constant="-61" id="N5y-EE-vtd"/>
+                                                    <constraint firstAttribute="trailing" secondItem="vEj-pt-h6A" secondAttribute="trailing" id="NYg-ID-mSB"/>
+                                                    <constraint firstItem="5kF-2v-IhU" firstAttribute="top" secondItem="jeB-eJ-QqI" secondAttribute="bottom" constant="8" symbolic="YES" id="VSg-ss-A5s"/>
                                                     <constraint firstItem="AEd-qc-yFQ" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="10" id="Vai-IY-gtB"/>
-                                                    <constraint firstAttribute="trailing" secondItem="HXB-Zc-5cQ" secondAttribute="trailing" constant="13" id="bgm-R0-xcc"/>
+                                                    <constraint firstItem="AEd-qc-yFQ" firstAttribute="top" secondItem="vEj-pt-h6A" secondAttribute="bottom" constant="8" symbolic="YES" id="WUh-PB-vb5"/>
                                                     <constraint firstAttribute="trailing" secondItem="jeB-eJ-QqI" secondAttribute="trailing" id="c2z-P4-a5A"/>
-                                                    <constraint firstItem="AEd-qc-yFQ" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="10" id="fAv-2Y-62j"/>
-                                                    <constraint firstItem="hvT-jw-5au" firstAttribute="centerX" secondItem="jeB-eJ-QqI" secondAttribute="centerX" id="g9i-je-VZ3"/>
+                                                    <constraint firstItem="6l1-41-dGT" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="8" id="eRV-x0-gCg"/>
                                                     <constraint firstAttribute="trailing" secondItem="AEd-qc-yFQ" secondAttribute="trailing" constant="4.5" id="gU8-UE-oO7"/>
-                                                    <constraint firstAttribute="bottom" secondItem="AEd-qc-yFQ" secondAttribute="bottom" constant="6" id="hoh-5P-hga"/>
-                                                    <constraint firstAttribute="height" constant="643" id="j2C-d4-1wo"/>
-                                                    <constraint firstItem="AEd-qc-yFQ" firstAttribute="top" secondItem="HXB-Zc-5cQ" secondAttribute="bottom" constant="10" id="kes-K7-N4a"/>
+                                                    <constraint firstAttribute="trailing" secondItem="5kF-2v-IhU" secondAttribute="trailing" id="gmF-ww-VXt"/>
+                                                    <constraint firstAttribute="bottom" secondItem="AEd-qc-yFQ" secondAttribute="bottom" constant="49" id="hoh-5P-hga"/>
+                                                    <constraint firstAttribute="height" constant="604" id="j2C-d4-1wo"/>
                                                     <constraint firstItem="jeB-eJ-QqI" firstAttribute="top" secondItem="zmE-Ve-6RW" secondAttribute="top" id="l39-39-28t"/>
-                                                    <constraint firstAttribute="trailing" secondItem="hvT-jw-5au" secondAttribute="trailing" constant="25" id="qRv-3a-9E7"/>
+                                                    <constraint firstItem="6l1-41-dGT" firstAttribute="top" secondItem="5kF-2v-IhU" secondAttribute="bottom" constant="3" id="rnv-Kn-M2q"/>
                                                     <constraint firstAttribute="trailing" secondItem="iM8-kq-bLV" secondAttribute="trailing" constant="5" id="tFm-rt-2M0"/>
-                                                    <constraint firstItem="hvT-jw-5au" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" constant="25" id="veB-IF-uUe"/>
+                                                    <constraint firstItem="vEj-pt-h6A" firstAttribute="leading" secondItem="zmE-Ve-6RW" secondAttribute="leading" id="w3M-xY-Ze3"/>
                                                 </constraints>
                                             </view>
                                             <view contentMode="scaleToFill" id="sgj-cX-m7T">
-                                                <rect key="frame" x="0.0" y="643" width="414" height="44"/>
+                                                <rect key="frame" x="0.0" y="560" width="414" height="44"/>
                                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                                 <subviews>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="tpv-ov-bjl">
@@ -4756,85 +4818,48 @@ looking at its layout. The point of using Lorem </string>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="93" translatesAutoresizingMaskIntoConstraints="NO" id="WJ2-uc-bCV">
-                                                        <rect key="frame" x="10" y="4" width="394.5" height="27"/>
+                                                    <stackView opaque="NO" contentMode="scaleToFill" spacing="80" translatesAutoresizingMaskIntoConstraints="NO" id="WJ2-uc-bCV">
+                                                        <rect key="frame" x="111.5" y="4" width="191" height="27"/>
                                                         <subviews>
-                                                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="dUV-gx-BMt">
-                                                                <rect key="frame" x="0.0" y="0.0" width="67.5" height="27"/>
-                                                                <color key="tintColor" red="0.85882352941176465" green="0.67450980392156867" blue="0.25098039215686274" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <attributedString key="attributedTitle">
-                                                                        <fragment content="Posts">
-                                                                            <attributes>
-                                                                                <font key="NSFont" size="11" name="Helvetica"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                </buttonConfiguration>
-                                                                <connections>
-                                                                    <action selector="PostsBtnOnPressed:" destination="USa-dY-apv" eventType="touchUpInside" id="fqZ-ZQ-Qjr"/>
-                                                                </connections>
-                                                            </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GRy-02-7ya">
-                                                                <rect key="frame" x="160.5" y="0.0" width="73" height="27"/>
+                                                                <rect key="frame" x="0.0" y="0.0" width="60.5" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="height" constant="27" id="9aC-Ro-sz4"/>
+                                                                    <constraint firstAttribute="width" constant="60.5" id="oTS-Un-vS8"/>
+                                                                </constraints>
                                                                 <color key="tintColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <attributedString key="attributedTitle">
-                                                                        <fragment content="Photos">
-                                                                            <attributes>
-                                                                                <font key="NSFont" size="11" name="Helvetica"/>
-                                                                                <paragraphStyle key="NSParagraphStyle" alignment="center" lineBreakMode="wordWrapping" baseWritingDirection="natural" tighteningFactorForTruncation="0.0"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                </buttonConfiguration>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="" image="photo"/>
                                                                 <connections>
                                                                     <action selector="PhotosBtnOnPressed:" destination="USa-dY-apv" eventType="touchUpInside" id="d1j-0t-jaE"/>
                                                                 </connections>
                                                             </button>
                                                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="kUG-gt-doQ">
-                                                                <rect key="frame" x="326.5" y="0.0" width="68" height="27"/>
+                                                                <rect key="frame" x="140.5" y="0.0" width="50.5" height="27"/>
+                                                                <constraints>
+                                                                    <constraint firstAttribute="width" constant="50.5" id="bD8-rn-4qh"/>
+                                                                </constraints>
                                                                 <color key="tintColor" red="0.54117647058823526" green="0.54117647058823526" blue="0.5607843137254902" alpha="1" colorSpace="calibratedRGB"/>
-                                                                <state key="normal" title="Button"/>
-                                                                <buttonConfiguration key="configuration" style="plain">
-                                                                    <attributedString key="attributedTitle">
-                                                                        <fragment content="Videos">
-                                                                            <attributes>
-                                                                                <font key="NSFont" size="11" name="Helvetica"/>
-                                                                            </attributes>
-                                                                        </fragment>
-                                                                    </attributedString>
-                                                                </buttonConfiguration>
+                                                                <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                                                <state key="normal" title="" image="videos-1"/>
                                                                 <connections>
                                                                     <action selector="VideosBtnOnPressed:" destination="USa-dY-apv" eventType="touchUpInside" id="WEF-iF-EhE"/>
                                                                 </connections>
                                                             </button>
                                                         </subviews>
                                                     </stackView>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="bpA-DF-szF">
-                                                        <rect key="frame" x="2.5" y="41.5" width="82.5" height="3"/>
-                                                        <color key="backgroundColor" red="0.85882352939999995" green="0.67450980390000004" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
-                                                        <constraints>
-                                                            <constraint firstAttribute="height" constant="3" id="HqG-vJ-H58"/>
-                                                        </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
-                                                        <nil key="textColor"/>
-                                                        <nil key="highlightedColor"/>
-                                                    </label>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kJl-V3-9W7">
-                                                        <rect key="frame" x="162" y="41.5" width="90" height="3"/>
+                                                        <rect key="frame" x="104.5" y="41.5" width="74.5" height="3"/>
                                                         <color key="backgroundColor" red="0.85882352939999995" green="0.67450980390000004" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="height" constant="3" id="vvF-T1-1L8"/>
+                                                            <constraint firstAttribute="height" constant="3" id="Uyj-qF-SLb"/>
                                                         </constraints>
                                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-YY-CHl">
-                                                        <rect key="frame" x="329" y="41.5" width="83" height="3"/>
+                                                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1ru-YY-CHl">
+                                                        <rect key="frame" x="246.5" y="41.5" width="61.5" height="3"/>
                                                         <color key="backgroundColor" red="0.85882352939999995" green="0.67450980390000004" blue="0.25098039220000001" alpha="1" colorSpace="calibratedRGB"/>
                                                         <constraints>
                                                             <constraint firstAttribute="height" constant="3" id="Myf-aK-IR0"/>
@@ -4846,21 +4871,14 @@ looking at its layout. The point of using Lorem </string>
                                                 </subviews>
                                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                                 <constraints>
-                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="centerX" secondItem="tpv-ov-bjl" secondAttribute="centerX" id="0kd-8k-R3R"/>
+                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="width" secondItem="GRy-02-7ya" secondAttribute="width" multiplier="1.23077" id="3Sl-JS-1lr"/>
                                                     <constraint firstAttribute="bottom" secondItem="tpv-ov-bjl" secondAttribute="bottom" id="4Nn-NR-qHn"/>
-                                                    <constraint firstItem="bpA-DF-szF" firstAttribute="centerY" secondItem="tpv-ov-bjl" secondAttribute="centerY" id="7xn-aQ-b32"/>
-                                                    <constraint firstItem="bpA-DF-szF" firstAttribute="top" secondItem="WJ2-uc-bCV" secondAttribute="bottom" constant="10.5" id="Bl5-QQ-PkN"/>
                                                     <constraint firstItem="tpv-ov-bjl" firstAttribute="leading" secondItem="sgj-cX-m7T" secondAttribute="leading" id="D5f-RV-ql3"/>
-                                                    <constraint firstItem="bpA-DF-szF" firstAttribute="width" secondItem="dUV-gx-BMt" secondAttribute="width" multiplier="1.22302" id="Hfn-fK-KHe"/>
-                                                    <constraint firstItem="bpA-DF-szF" firstAttribute="leading" secondItem="sgj-cX-m7T" secondAttribute="leading" constant="2.5" id="Lkt-1d-aEk"/>
-                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="width" secondItem="GRy-02-7ya" secondAttribute="width" multiplier="1.22302" id="SWH-LU-Tp4"/>
-                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="centerX" secondItem="GRy-02-7ya" secondAttribute="centerX" id="U3x-sA-AzN"/>
-                                                    <constraint firstItem="bpA-DF-szF" firstAttribute="centerX" secondItem="dUV-gx-BMt" secondAttribute="centerX" id="VHP-lQ-2hF"/>
-                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="centerY" secondItem="tpv-ov-bjl" secondAttribute="centerY" id="XS2-Kz-5Jm"/>
-                                                    <constraint firstItem="WJ2-uc-bCV" firstAttribute="top" secondItem="sgj-cX-m7T" secondAttribute="top" constant="4" id="buO-7I-QaW"/>
+                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="centerX" secondItem="GRy-02-7ya" secondAttribute="centerX" id="EAd-xE-8Rg"/>
+                                                    <constraint firstItem="WJ2-uc-bCV" firstAttribute="centerX" secondItem="sgj-cX-m7T" secondAttribute="centerX" id="TQr-FV-7ZA"/>
+                                                    <constraint firstItem="kJl-V3-9W7" firstAttribute="top" secondItem="GRy-02-7ya" secondAttribute="bottom" constant="10.5" id="Wfs-gg-nmF"/>
+                                                    <constraint firstItem="WJ2-uc-bCV" firstAttribute="top" secondItem="sgj-cX-m7T" secondAttribute="top" constant="4" id="Yfq-x9-Iq2"/>
                                                     <constraint firstItem="1ru-YY-CHl" firstAttribute="centerX" secondItem="kUG-gt-doQ" secondAttribute="centerX" id="fgw-ha-urf"/>
-                                                    <constraint firstAttribute="trailing" secondItem="WJ2-uc-bCV" secondAttribute="trailing" constant="9.5" id="iSl-Ao-RXb"/>
-                                                    <constraint firstItem="WJ2-uc-bCV" firstAttribute="leading" secondItem="sgj-cX-m7T" secondAttribute="leading" constant="10" id="qVl-d8-bkC"/>
                                                     <constraint firstItem="1ru-YY-CHl" firstAttribute="centerY" secondItem="tpv-ov-bjl" secondAttribute="centerY" id="qwl-3b-gN9"/>
                                                     <constraint firstAttribute="trailing" secondItem="tpv-ov-bjl" secondAttribute="trailing" id="ryc-B7-yWJ"/>
                                                     <constraint firstItem="1ru-YY-CHl" firstAttribute="width" secondItem="kUG-gt-doQ" secondAttribute="width" multiplier="1.22302" id="u8v-gS-gUa"/>
@@ -4873,7 +4891,6 @@ looking at its layout. The point of using Lorem </string>
                                             <constraint firstAttribute="trailing" secondItem="dJm-Vz-ZlE" secondAttribute="trailing" id="5Ad-So-St2"/>
                                             <constraint firstItem="dJm-Vz-ZlE" firstAttribute="top" secondItem="bZg-GY-dtu" secondAttribute="top" id="6me-US-Wda"/>
                                             <constraint firstItem="dJm-Vz-ZlE" firstAttribute="leading" secondItem="bZg-GY-dtu" secondAttribute="leading" id="Pjt-iY-oWG"/>
-                                            <constraint firstItem="sgj-cX-m7T" firstAttribute="top" secondItem="zmE-Ve-6RW" secondAttribute="bottom" id="Yah-1q-glE"/>
                                             <constraint firstItem="zmE-Ve-6RW" firstAttribute="top" secondItem="bZg-GY-dtu" secondAttribute="top" id="b0m-2p-k4m"/>
                                             <constraint firstItem="zmE-Ve-6RW" firstAttribute="leading" secondItem="bZg-GY-dtu" secondAttribute="leading" id="isz-Tw-Hhq"/>
                                             <constraint firstAttribute="bottom" secondItem="dJm-Vz-ZlE" secondAttribute="bottom" id="uUl-LO-Ng8"/>
@@ -4914,8 +4931,6 @@ looking at its layout. The point of using Lorem </string>
                         <outlet property="Collectionview" destination="AEd-qc-yFQ" id="EXC-wI-IHL"/>
                         <outlet property="PhotosBtn" destination="GRy-02-7ya" id="Ao4-Lq-YSi"/>
                         <outlet property="PhotosIndicator" destination="kJl-V3-9W7" id="N2R-BN-iTP"/>
-                        <outlet property="PostIndicator" destination="bpA-DF-szF" id="LRh-lo-Ba3"/>
-                        <outlet property="PostsBtn" destination="dUV-gx-BMt" id="WjS-O9-VuG"/>
                         <outlet property="TababraView" destination="sgj-cX-m7T" id="z3M-Su-yfZ"/>
                         <outlet property="TableView" destination="dJm-Vz-ZlE" id="2Xk-6t-40h"/>
                         <outlet property="VideosBtn" destination="kUG-gt-doQ" id="GCw-rq-8qm"/>
@@ -6799,6 +6814,54 @@ is that it has a more-or-less normal </string>
             </objects>
             <point key="canvasLocation" x="4505.7971014492759" y="1879.6875"/>
         </scene>
+        <!--Share With App View Controller-->
+        <scene sceneID="5hz-6u-t2B">
+            <objects>
+                <viewController storyboardIdentifier="ShareWithAppViewController" id="TGR-9E-Ksi" customClass="ShareWithAppViewController" customModule="Marcy" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9XP-yF-F0v">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="qNg-JC-YSa">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" image="AlertBg" translatesAutoresizingMaskIntoConstraints="NO" id="A7X-cr-ZVi">
+                                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                                    </imageView>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mst-2W-EQd">
+                                        <rect key="frame" x="16" y="69" width="19" height="22"/>
+                                        <inset key="imageEdgeInsets" minX="0.0" minY="0.0" maxX="2.2250738585072014e-308" maxY="0.0"/>
+                                        <state key="normal" image="back"/>
+                                        <connections>
+                                            <action selector="BackBtnOnPressed:" destination="TGR-9E-Ksi" eventType="touchUpInside" id="3zD-nt-Z0K"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <constraints>
+                                    <constraint firstItem="A7X-cr-ZVi" firstAttribute="top" secondItem="qNg-JC-YSa" secondAttribute="top" id="0QF-t4-eYe"/>
+                                    <constraint firstItem="mst-2W-EQd" firstAttribute="leading" secondItem="qNg-JC-YSa" secondAttribute="leading" constant="16" id="6lH-cn-SE4"/>
+                                    <constraint firstItem="A7X-cr-ZVi" firstAttribute="leading" secondItem="qNg-JC-YSa" secondAttribute="leading" id="NKq-aS-eii"/>
+                                    <constraint firstAttribute="bottom" secondItem="A7X-cr-ZVi" secondAttribute="bottom" id="NX4-EF-C8B"/>
+                                    <constraint firstItem="mst-2W-EQd" firstAttribute="top" secondItem="qNg-JC-YSa" secondAttribute="top" constant="69" id="ZXs-QC-UWl"/>
+                                    <constraint firstAttribute="trailing" secondItem="A7X-cr-ZVi" secondAttribute="trailing" id="oiL-Sb-ZVx"/>
+                                </constraints>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="6pz-SF-n0F"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="qNg-JC-YSa" firstAttribute="top" secondItem="9XP-yF-F0v" secondAttribute="top" id="YPs-ZT-cTc"/>
+                            <constraint firstItem="6pz-SF-n0F" firstAttribute="trailing" secondItem="qNg-JC-YSa" secondAttribute="trailing" id="faR-eX-KJF"/>
+                            <constraint firstItem="qNg-JC-YSa" firstAttribute="leading" secondItem="6pz-SF-n0F" secondAttribute="leading" id="hgM-hI-X9X"/>
+                            <constraint firstAttribute="bottom" secondItem="qNg-JC-YSa" secondAttribute="bottom" id="oLp-jl-Gns"/>
+                        </constraints>
+                    </view>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="BoK-Wk-sjX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="5340.579710144928" y="1879.6875"/>
+        </scene>
         <!--Signal Bad Stories View Controller-->
         <scene sceneID="e8c-mb-THR">
             <objects>
@@ -7142,6 +7205,7 @@ is that it has a more-or-less normal </string>
     </scenes>
     <resources>
         <image name="Add_user" width="25" height="25"/>
+        <image name="AlertBg" width="414" height="896"/>
         <image name="All kids" width="75" height="109"/>
         <image name="Arts" width="342" height="104"/>
         <image name="Audio_message" width="325.5" height="34"/>
@@ -7166,10 +7230,10 @@ is that it has a more-or-less normal </string>
         <image name="NOS Part" width="170.5" height="127"/>
         <image name="Profile" width="18" height="20"/>
         <image name="Profuser_1" width="84" height="84"/>
+        <image name="Sengal_lights" width="413" height="136"/>
         <image name="Slide Time" width="382" height="2"/>
         <image name="Story_1" width="177" height="262.5"/>
         <image name="Top_bg_yasminie" width="419.5" height="257"/>
-        <image name="Top_image" width="420.5" height="257"/>
         <image name="Yasmini_image" width="114" height="124.5"/>
         <image name="accounts" width="201" height="106"/>
         <image name="add" width="58" height="58"/>
@@ -7190,8 +7254,8 @@ is that it has a more-or-less normal </string>
         <image name="flag" width="99" height="107.5"/>
         <image name="fuser_1" width="72" height="72"/>
         <image name="gearshape" catalog="system" width="128" height="121"/>
+        <image name="giraffe_bg" width="420.5" height="257"/>
         <image name="groupe1" width="110" height="124"/>
-        <image name="image_grp" width="354" height="332"/>
         <image name="language" width="24" height="24"/>
         <image name="locked" width="128" height="128"/>
         <image name="log-out" width="22" height="24"/>
@@ -7202,6 +7266,7 @@ is that it has a more-or-less normal </string>
         <image name="notification_1" width="347" height="122"/>
         <image name="notification_3" width="347" height="191.5"/>
         <image name="notifications" width="36" height="36"/>
+        <image name="photo" width="22.5" height="22.5"/>
         <image name="photos" width="392" height="342"/>
         <image name="post1-2" width="400" height="633"/>
         <image name="post_create" width="290" height="90"/>
@@ -7210,10 +7275,9 @@ is that it has a more-or-less normal </string>
         <image name="publish_btn" width="200" height="50"/>
         <image name="radio btn" width="16" height="16"/>
         <image name="report" width="16" height="16"/>
+        <image name="se_1" width="105.5" height="116"/>
         <image name="search" width="36" height="36"/>
         <image name="see-all-button" width="40" height="12"/>
-        <image name="sengal" width="364" height="80"/>
-        <image name="sengal_follow_row" width="389" height="156"/>
         <image name="signal_bad_image" width="421" height="902"/>
         <image name="spectator4" width="98.5" height="81.5"/>
         <image name="storiesView" width="172" height="124.5"/>
@@ -7221,6 +7285,7 @@ is that it has a more-or-less normal </string>
         <image name="user1" width="110" height="161"/>
         <image name="userBday1" width="110" height="156.5"/>
         <image name="user_1" width="55" height="55"/>
+        <image name="videos-1" width="26.5" height="26.5"/>
         <image name="views" width="38" height="14"/>
         <image name="voice" width="14" height="20"/>
         <image name="write" width="414" height="45"/>

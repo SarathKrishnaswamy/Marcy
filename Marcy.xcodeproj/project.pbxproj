@@ -106,6 +106,8 @@
 		9ED8AD8526D432AA00789C71 /* AccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9ED8AD8426D432AA00789C71 /* AccountsViewController.swift */; };
 		9EE55A2F272899CA00FD7724 /* SearchFirstViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE55A2E272899CA00FD7724 /* SearchFirstViewController.swift */; };
 		9EE55A312728A78400FD7724 /* OtherAccountsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EE55A302728A78400FD7724 /* OtherAccountsViewController.swift */; };
+		9EEB3A0D274438A800C8D80B /* ShareCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB3A0C274438A800C8D80B /* ShareCollectionViewCell.swift */; };
+		9EEB3A0F27443BFD00C8D80B /* ShareWithAppViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEB3A0E27443BFD00C8D80B /* ShareWithAppViewController.swift */; };
 		9EEC95F026CAED7C0082C8E0 /* MainViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9EEC95EF26CAED7C0082C8E0 /* MainViewController.swift */; };
 /* End PBXBuildFile section */
 
@@ -235,6 +237,8 @@
 		9ED8AD8426D432AA00789C71 /* AccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountsViewController.swift; sourceTree = "<group>"; };
 		9EE55A2E272899CA00FD7724 /* SearchFirstViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SearchFirstViewController.swift; sourceTree = "<group>"; };
 		9EE55A302728A78400FD7724 /* OtherAccountsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OtherAccountsViewController.swift; sourceTree = "<group>"; };
+		9EEB3A0C274438A800C8D80B /* ShareCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareCollectionViewCell.swift; sourceTree = "<group>"; };
+		9EEB3A0E27443BFD00C8D80B /* ShareWithAppViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ShareWithAppViewController.swift; sourceTree = "<group>"; };
 		9EEC95EF26CAED7C0082C8E0 /* MainViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MainViewController.swift; sourceTree = "<group>"; };
 		BD478C6EBE2FA7B8A61F13F9 /* Pods-Marcy.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Marcy.release.xcconfig"; path = "Target Support Files/Pods-Marcy/Pods-Marcy.release.xcconfig"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -455,6 +459,8 @@
 			isa = PBXGroup;
 			children = (
 				9E65134C2720A92800161965 /* ShareViewController.swift */,
+				9EEB3A0C274438A800C8D80B /* ShareCollectionViewCell.swift */,
+				9EEB3A0E27443BFD00C8D80B /* ShareWithAppViewController.swift */,
 			);
 			path = Share;
 			sourceTree = "<group>";
@@ -870,6 +876,7 @@
 				9E3CC45226D19F3C005CDBCD /* DiscoverViewController.swift in Sources */,
 				9ED1067E26DAB9C200F90278 /* InterestsTableViewCell.swift in Sources */,
 				9E65134D2720A92800161965 /* ShareViewController.swift in Sources */,
+				9EEB3A0D274438A800C8D80B /* ShareCollectionViewCell.swift in Sources */,
 				9ECD0C2926DC2A8A00CAD0E2 /* PopGroupsCollectionViewCell.swift in Sources */,
 				9ECD0C1526DC00E400CAD0E2 /* AllGroupsViewController.swift in Sources */,
 				9EE55A2F272899CA00FD7724 /* SearchFirstViewController.swift in Sources */,
@@ -886,6 +893,7 @@
 				9ED8AD7F26D42CB000789C71 /* ProfileNameTableViewCell.swift in Sources */,
 				9ED8AD8526D432AA00789C71 /* AccountsViewController.swift in Sources */,
 				9EEC95F026CAED7C0082C8E0 /* MainViewController.swift in Sources */,
+				9EEB3A0F27443BFD00C8D80B /* ShareWithAppViewController.swift in Sources */,
 				9ECD0C1726DC03B600CAD0E2 /* AllGroupCollectionViewCell.swift in Sources */,
 				9E6C75B826FD12F900202923 /* ProfOtherAccountsTableViewCell.swift in Sources */,
 				9E63A52326EAA4B4006211DC /* FooterCollectionReusableView.swift in Sources */,
@@ -1066,7 +1074,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQB33K4HKY;
+				DEVELOPMENT_TEAM = CMBCVSZ26K;
 				INFOPLIST_FILE = Marcy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1087,7 +1095,7 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = JQB33K4HKY;
+				DEVELOPMENT_TEAM = CMBCVSZ26K;
 				INFOPLIST_FILE = Marcy/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 13.0;
 				LD_RUNPATH_SEARCH_PATHS = (

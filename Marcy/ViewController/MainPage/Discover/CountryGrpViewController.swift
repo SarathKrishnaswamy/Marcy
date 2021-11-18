@@ -15,10 +15,10 @@ class CountryGrpViewController: UIViewController {
     @IBOutlet weak var stickyHeaderView: UIView!
     @IBOutlet weak var Collectionview: UICollectionView!
     @IBOutlet weak var TababraView: UIView!
-    @IBOutlet weak var PostsBtn: UIButton!
+   // @IBOutlet weak var PostsBtn: UIButton!
     @IBOutlet weak var PhotosBtn: UIButton!
     @IBOutlet weak var VideosBtn: UIButton!
-    @IBOutlet weak var PostIndicator: UILabel!
+    //@IBOutlet weak var PostIndicator: UILabel!
     @IBOutlet weak var PhotosIndicator: UILabel!
     @IBOutlet weak var VideosIndicator: UILabel!
     
@@ -36,9 +36,10 @@ class CountryGrpViewController: UIViewController {
         super.viewDidLoad()
         setupTableView()
         reset()
-        self.PostsBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
-        self.PostIndicator.isHidden = false
-        self.current_cat = 1
+       
+        self.current_cat = 2
+        self.PhotosBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
+        self.PhotosIndicator.isHidden = false
 
         // Do any additional setup after loading the view.
     }
@@ -55,10 +56,10 @@ class CountryGrpViewController: UIViewController {
     //MARK: View Setup
     
     func reset(){
-        self.PostIndicator.isHidden = true
+       // self.PostIndicator.isHidden = true
         self.PhotosIndicator.isHidden = true
         self.VideosIndicator.isHidden = true
-        self.PostsBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
+       // self.PostsBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
         self.PhotosBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
         self.VideosBtn.setTitleColor(UIColor(hexString: "#8A8A8F"), for: .normal)
     }
@@ -87,13 +88,13 @@ class CountryGrpViewController: UIViewController {
     }
     
     
-    @IBAction func PostsBtnOnPressed(_ sender: Any) {
+    /*@IBAction func PostsBtnOnPressed(_ sender: Any) {
         reset()
         self.PostsBtn.setTitleColor(UIColor(hexString: "#DBAC40"), for: .normal)
         self.PostIndicator.isHidden = false
         self.current_cat = 1
         self.TableView.reloadData()
-    }
+    }*/
     
     
     
@@ -119,10 +120,7 @@ class CountryGrpViewController: UIViewController {
 }
 extension CountryGrpViewController:UITableViewDelegate,UITableViewDataSource,UICollectionViewDelegate, UICollectionViewDataSource{
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        if current_cat == posts{
-            return post_item.count
-        }
-        else if current_cat == photos_cat{
+    if current_cat == photos_cat{
             return post_1_item.count
         }
         else{
@@ -133,15 +131,7 @@ extension CountryGrpViewController:UITableViewDelegate,UITableViewDataSource,UIC
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        if current_cat == posts{
-            if let cell = tableView.dequeueReusableCell(withIdentifier: "TabItemTableViewCell") as? TabItemTableViewCell {
-                cell.ThumbImage.image = post_item[indexPath.row]
-                return cell
-            }
-            
-            return UITableViewCell()
-        }
-        else if current_cat == photos_cat{
+        if current_cat == photos_cat{
             if let cell = tableView.dequeueReusableCell(withIdentifier: "TabItemTableViewCell") as? TabItemTableViewCell {
                 cell.ThumbImage.image = post_1_item[indexPath.row]
                 return cell
